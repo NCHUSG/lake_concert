@@ -1,0 +1,231 @@
+/* stripe */
+.masthead.stripe{
+    padding: 50px 0px;
+}
+.long.stripe{
+    height: 200px;
+}
+.short.stripe{
+    height: 70px;
+}
+.real.long.stripe{
+    height: 600px;
+}
+
+/* stript color */
+.index.stripe .header{
+    color: #A1D7FF;
+    text-shadow: 0px 0px 20px #000
+}
+.index.stripe .header .sub.header{
+    color: #A1D7FF;
+    text-shadow: 0px 0px 20px #000
+}
+
+.descript.stripe .header{
+    color: #D8DAA7;
+    text-shadow: 0px 0px 20px #000
+}
+
+.memory.stripe .header,div.sub.header{
+    color: #DAC4A7;
+    text-shadow: 0px 0px 20px #000
+}
+.memory.stripe .header .sub.header{
+    color: #DAC4A7;
+    text-shadow: 0px 0px 20px #000
+}
+
+.footer.stripe{
+    background: black;
+}
+.footer.stripe .header{
+    color: white;
+}
+
+/* header */
+@media (min-width: 800px){
+    .ui.header.massive{
+        font-size: 5em;
+    }
+}
+
+/* frame */
+.frame{
+    /*width: 100%;*/
+}
+.frame.background{
+    position: fixed;
+    z-index: 1;
+}
+.frame.filter{
+    position: fixed;
+    z-index: 2;
+    height: 100vh;
+    width: 100%;
+}
+.frame.curtain{
+    position: relative;
+    z-index: 3;
+}
+
+.frame.filter{
+    transition: all 1s;
+    background: black;
+    opacity: 0.1;
+}
+
+.frame.filter.des{
+    background: #398000;
+    opacity: 0.5;
+}
+.frame.filter.recruit-bg{
+    background: #805A00;
+    opacity: 0.5;
+}
+.frame.filter.concert{
+    background: #420080;
+    opacity: 0.5;
+}
+.frame.filter.vender{
+    background: #00804A;
+    opacity: 0.5;
+}
+
+/* misc */
+.centerized{
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.centerAligned{
+    text-align: center;
+}
+.ui.hidable{
+    opacity: 1;
+    transition: opacity 1s;
+}
+.ui.hidable.hidden{
+    opacity: 0;
+}
+
+.viewport-height{
+    min-height: 100vh;
+}
+
+.bg{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* segment */
+.ui.homebrew.inverted.segment{
+    background: black;
+    color: #46f69d !important;
+}
+
+/* rwd */
+@media (min-width: 700px){
+    .visible.on.xs{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .visible.having.sm{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .visible.on.sm{
+        display: none;
+    }
+}
+
+@media (min-width: 1050px){
+    .visible.on.sm{
+        display: none;
+    }
+}
+
+@media (max-width: 1050px){
+    .visible.on.md{
+        display: none;
+    }
+}
+
+@media (max-width: 1050px){
+    .visible.having.md{
+        display: none;
+    }
+}
+
+@media (min-width: 1050px){
+    .visible.no.md{
+        display: none;
+    }
+}
+
+@media (min-width: 1400px){
+    .visible.on.md{
+        display: none;
+    }
+}
+
+@media (max-width: 1400px){
+    .visible.on.lg{
+        display: none;
+    }
+}
+
+@media (min-width: 1400px){
+    .visible.no.lg{
+        display: none;
+    }
+}
+
+/* body */
+body {
+    margin: 0;
+    background: black;
+    transition: all 1s;
+}
+/* font */
+body {
+  /*font-family: 'Satisfy', cursive;*/
+}
+
+/* input */
+div.recruit{
+    width: 80%;
+    margin-top: 20px;
+}
+div.ui.transparent.underlined.input{
+    border-bottom: 2px #422B09 groove;
+}
+.ui.transparent.underlined.input input{
+    color: white;
+}
+.ui.transparent.underlined.input ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #DAC4A7;
+}
+.ui.transparent.underlined.input :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #DAC4A7;
+   opacity:  1;
+}
+.ui.transparent.underlined.input ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #DAC4A7;
+   opacity:  1;
+}
+.ui.transparent.underlined.input :-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #DAC4A7;
+}
+
+/* uploader */
+#shown-has-img{
+    display: none;
+}
+.ui.button.fluid{
+    margin-bottom: 5px;
+}
