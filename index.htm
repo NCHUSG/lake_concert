@@ -72,10 +72,10 @@
 						</h1>
 					</div>
 				</div>
-				<div class="long stripe"></div>
-				<div class="ui page three column grid">
+				<div id="menu-enabler" class="long stripe"></div>
+				<div id="menuable" class="ui page three column grid">
 					<div class="column">
-						<h2 href="#concert" class="ui icon centerized goto header" data-html="敬請期待！">
+						<h2 href="#concert" class="ui concert icon centerized goto header" data-html="敬請期待！">
 							<i class="music icon"></i>
 							<div class="content">
 								音樂季
@@ -84,7 +84,7 @@
 						</h2>
 					</div>
 					<div class="column">
-						<h2 href="#recruit" class="ui icon centerized goto header" data-html="準備中！目前上傳功能純粹測試用，輸入的資料都將不會被紀錄！正式開始日期將再另外公布！">
+						<h2 href="#recruit" class="ui recruit icon centerized goto header" data-html="準備中！目前上傳功能純粹測試用，輸入的資料都將不會被紀錄！正式開始日期將再另外公布！">
 							<i class="photo icon"></i>
 							<div class="content">
 								你我的大學回憶展覽
@@ -94,7 +94,7 @@
 						</h2>
 					</div>
 					<div class="column">
-						<h2 href="#vender" class="ui icon centerized goto header" data-html="敬請期待！">
+						<h2 href="#vender" class="ui vender icon centerized goto header" data-html="敬請期待！">
 							<i class="tree icon"></i>
 							<div class="content">
 								湖畔小攤
@@ -104,7 +104,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="des" class="masthead descript viewport-height stripe">
+			<div id="des" class="masthead des viewport-height stripe">
 				<h3 class="ui center aligned header">十八歲，你還怎麼青澀；貳拾貳，你又怎麼成熟</h3>
 				<h3 class="ui center aligned header">在無數次邁向下一個階段，我們留下的腳印或回憶，仍光輝閃爍</h3>
 				<h3 class="ui center aligned header">只是隨著太陽月亮，它們總會黯淡…</h3>
@@ -113,7 +113,7 @@
 				<h3 class="ui center aligned header">告訴所有人：我們曾經勇敢，曾經美麗；我們走過悲傷，也擁抱過笑容</h3>
 				<h3 class="ui center aligned header">讓青春回憶如繁星，永恆</h3>
 			</div>
-			<div id="recruit" class="masthead memory viewport-height stripe">
+			<div id="recruit" class="masthead recruit viewport-height stripe">
 				<div class="ui page two column middle aligned relaxed fitted stackable grid">
 					<div class="column">
 						<h2 class="ui icon centerized header">
@@ -135,18 +135,18 @@
 							給自己一次勇敢的機會，也讓所有人知道你/妳的美麗！<br>
 						</h4>
 						<form id="recruit-form" action="upload.php" method="POST">
-							<div class="ui centerized massive transparent recruit underlined input">
+							<div class="ui centerized massive transparent recruit-input underlined input">
 							  <input name="name" placeholder="你/妳的名字..." type="text">
 							</div>
-							<div class="ui centerized massive transparent recruit underlined input">
+							<div class="ui centerized massive transparent recruit-input underlined input">
 							  <input name="email" placeholder="你/妳的信箱..." type="email">
 							</div>
-							<div class="ui centerized massive transparent recruit underlined input">
+							<div class="ui centerized massive transparent recruit-input underlined input">
 							  <input name="des" placeholder="一段說明文字..." type="text">
 							</div>
 							<input id="uploaded-href" type="hidden" name="img">
 						</form>
-						<div class="ui centerized inverted recruit segment">
+						<div class="ui centerized inverted recruit-input segment">
 							<div id="shown-has-img">
 								<a id="preview-btn" href="" class="ui fluid button" target="_blank">按我預覽</a>
 								<div id="submit" class="fluid positive ui button">送出，和大家分享你的回憶！</div>
@@ -162,7 +162,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="concert" class="masthead viewport-height stripe">
+			<div id="concert" class="masthead concert viewport-height stripe">
 				<h2 class="ui icon centerized header">
 					<i class="music icon"></i>
 					<div class="content">
@@ -174,7 +174,7 @@
 				敬請期待...
 				</h1>
 			</div>
-			<div id="vender" class="masthead viewport-height stripe">
+			<div id="vender" class="masthead vender viewport-height stripe">
 				<h2 class="ui icon centerized header">
 					<i class="tree icon"></i>
 					<div class="content">
@@ -232,7 +232,7 @@
 					</div>
 					<div class="column">
 						<h3>麻煩確認並同意以下事項</h3>
-						<p>所有參與徵稿之作品及原稿數位檔案之著作財產權歸原著所有，唯參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉於活動中無償使用作品。本會壅有素材或影片創意重製、公開展示之權利，均不另予通知及致酬。經公布獲展之作品，著作人不得要求取消獲展資格。參展作品不得冒名、抄襲、複製他人之作品，亦不得以夫妻、子女、朋友或任何關係，將參展作品之著作權讓與、買賣以行冒名頂替參展之實，違者經查證屬實將依法除名，不予展覽。凡參賽即視同認可並接受本簡章之各項規定。</p>
+						<p>所有參與徵稿之作品及原稿數位檔案之著作財產權歸原著所有，唯參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉於活動中無償使用作品。本會擁有素材或影片創意重製、公開展示之權利，均不另予通知及致酬。經公布獲展之作品，著作人不得要求取消獲展資格。參展作品不得冒名、抄襲、複製他人之作品，亦不得以夫妻、子女、朋友或任何關係，將參展作品之著作權讓與、買賣以行冒名頂替參展之實，違者經查證屬實將依法除名，不予展覽。凡參賽即視同認可並接受本簡章之各項規定。</p>
 						<p>參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉為保護您的個人資料，依據個人資料保護法規定，於提供良好服務及執行職務或業務之必要範圍內蒐集、處理及利用您的個人資料。您同意本會以您所提供的個人資料確認您的身份、與您進行連絡、於展覽現場標誌，以及其他隱私權保護政策規範之使用方式。非在您同意下，本會不會將您的資料提供於本會外使用，您對於本會保有您的個人資料部分，日後仍得享有下列權利：一、得向本會查詢、請求閱覽、請求製給複製本。而本會依法得酌收必要成本費用。二、得向本會請求補充或更正。惟依法您應為適當之釋明。三、得向本會請求停止蒐集、處理或利用及請求刪除您的個人資料。</p>
 						<form id="confirm-form" action="upload.php" method="POST">
 							<div class="g-recaptcha" data-sitekey="6LdRg_8SAAAAAGwlJK0s4BOLY8BupKoBcRGJyprD"></div>

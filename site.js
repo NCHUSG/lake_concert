@@ -4,16 +4,22 @@ jQuery(function(){
     var refresh_inteval = false;
     function change_bg(){
         if(!refresh_inteval){
+            console.log("change_bg triggered!");
             if($(document).scrollTop() > $('#vender').position().top - $(window).height()/2)
                 $("#filter").attr("class",'filter vender frame');
             else if($(document).scrollTop() > $('#concert').position().top - $(window).height()/2)
                 $("#filter").attr("class",'filter concert frame');
             else if($(document).scrollTop() > $('#recruit').position().top - $(window).height()/2)
-                $("#filter").attr("class",'filter recruit-bg frame');
+                $("#filter").attr("class",'filter recruit frame');
             else if($(document).scrollTop() > $('#des').position().top - $(window).height()/2)
                 $("#filter").attr("class",'filter des frame');
             else
                 $("#filter").attr("class",'filter frame');
+
+            if($(document).scrollTop() > $("#menu-enabler").position().top + 280)
+                $("#menuable").addClass("menued");
+            else
+                $("#menuable").removeClass("menued");
         }
         refresh_inteval = setTimeout(function(){
             refresh_inteval = false;
@@ -140,8 +146,17 @@ jQuery(function(){
                         result = "喔不，發生錯誤:" + res.result;
                     }
                 }
-                else
+                else{
                     result = "感謝您的參與！您可以再上傳更多相片！";
+                    setTimeout(function(){
+                        $('input#uploader').prop("value","");
+                        $("input[name=des]").prop("value","");
+                        $("input[name=img]").prop("value","");
+                        $("input[name=g-recaptcha-response]").prop("value","");
+                        $("#shown-has-img").slideUp();
+                        grecaptcha.reset();
+                    },900);
+                }
                 $("#result").text(result);
             },
             error:function(xhr,e){
@@ -152,6 +167,7 @@ jQuery(function(){
                 setTimeout(function(){
                     $('#complete').modal('show',{queue:true});
                     $("#upload-dimer").removeClass("active");
+                    $(window).scroll(change_bg);
                 },1000);
             }
         });

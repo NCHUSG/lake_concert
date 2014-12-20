@@ -12,57 +12,7 @@
     height: 600px;
 }
 
-/* stript color */
-.index.stripe .header{
-    cursor:pointer;
-    transition: all 0.5s;
-    color: #A1D7FF;
-    text-shadow: 0px 0px 20px #000
-}
-.index.stripe .header .sub.header{
-    cursor:pointer;
-    transition: all 0.5s;
-    color: #A1D7FF;
-    text-shadow: 0px 0px 20px #000
-}
-.index.stripe .header:hover{
-    color: #50FFBB;
-    text-shadow: 0px 0px 20px #000
-}
-.index.stripe .header:hover .sub.header{
-    color: #50FFBB;
-    text-shadow: 0px 0px 20px #000
-}
-
-.descript.stripe .header{
-    color: #D8DAA7;
-    text-shadow: 0px 0px 20px #000
-}
-
-.memory.stripe .header,div.sub.header{
-    color: #DAC4A7;
-    text-shadow: 0px 0px 20px #000
-}
-.memory.stripe .header .sub.header{
-    color: #DAC4A7;
-    text-shadow: 0px 0px 20px #000
-}
-
-.footer.stripe{
-    background: black;
-}
-.footer.stripe .header{
-    color: white;
-}
-
-/* header */
-@media (min-width: 800px){
-    .ui.header.massive{
-        font-size: 5em;
-    }
-}
-
-/* frame */
+/* frame & filter */
 .frame.background{
     position: fixed;
     z-index: 1;
@@ -78,28 +28,66 @@
     position: relative;
     z-index: 3;
 }
-
 .frame.filter{
     transition: all 1s;
     background: black;
     opacity: 0.1;
 }
 
+/* stript and filter color */
+.index.stripe .header,.index.stripe h1,.index.stripe h2,.index.stripe h3,.index.stripe h4,.index.stripe h5,.index.stripe i,.index{
+    color: #C1C1ED !important;
+    text-shadow: 0px 0px 20px #000
+}
+
+.des.stripe .header,.des.stripe h1,.des.stripe h2,.des.stripe h3,.des.stripe h4,.des.stripe h5,.des.stripe i{
+    color: #6EFFA8 !important;
+    text-shadow: 0px 0px 20px #000
+}
 .frame.filter.des{
     background: #398000;
     opacity: 0.5;
 }
-.frame.filter.recruit-bg{
+
+.recruit.stripe .header,.recruit.stripe h1,.recruit.stripe h2,.recruit.stripe h3,.recruit.stripe h4,.recruit.stripe h5,.recruit.stripe i,.ui.recruit.header i,.ui.recruit.header div{
+    color: #E6E974 !important;
+    text-shadow: 0px 0px 20px #000
+}
+.frame.filter.recruit{
     background: #805A00;
     opacity: 0.5;
+}
+
+.concert.stripe .header,.concert.stripe h1,.concert.stripe h2,.concert.stripe h3,.concert.stripe h4,.concert.stripe h5,.concert.stripe i,.ui.concert.header i,.ui.concert.header div{
+    color: #FF80C7 !important;
+    text-shadow: 0px 0px 20px #000
 }
 .frame.filter.concert{
     background: #420080;
     opacity: 0.5;
 }
+
+.vender.stripe .header,.vender.stripe h1,.vender.stripe h2,.vender.stripe h3,.vender.stripe h4,.vender.stripe h5,.vender.stripe i,.ui.vender.header i,.ui.vender.header div{
+    color: #9EC8FF !important;
+    text-shadow: 0px 0px 20px #000
+}
 .frame.filter.vender{
     background: #00804A;
     opacity: 0.5;
+}
+
+.footer.stripe{
+    background: black;
+}
+.footer.stripe .header{
+    color: white;
+}
+
+/* header */
+@media (min-width: 800px){
+    .ui.header.massive{
+        font-size: 5em;
+    }
 }
 
 /* misc */
@@ -207,7 +195,7 @@ body {
 }
 
 /* input */
-div.recruit{
+div.recruit-input{
     width: 80%;
     margin-top: 20px;
 }
@@ -218,18 +206,18 @@ div.ui.transparent.underlined.input{
     color: white;
 }
 .ui.transparent.underlined.input ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #DAC4A7;
+    color: #E6E974;
 }
 .ui.transparent.underlined.input :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #DAC4A7;
-   opacity:  1;
+    color: #E6E974;
+    opacity:  1;
 }
 .ui.transparent.underlined.input ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #DAC4A7;
-   opacity:  1;
+    color: #E6E974;
+    opacity:  1;
 }
 .ui.transparent.underlined.input :-ms-input-placeholder { /* Internet Explorer 10+ */
-   color:    #DAC4A7;
+    color: #E6E974;
 }
 
 /* uploader */
@@ -239,12 +227,33 @@ div.ui.transparent.underlined.input{
 .ui.button.fluid{
     margin-bottom: 5px;
 }
-.ui.inverted.recruit.segment{
-    background-color: rgba(215, 129, 95, 0.45) !important;
+.ui.inverted.recruit-input.segment{
+    background-color: rgba(88, 90, 0, 0.51) !important;
     color: #FFF !important;
 }
 
 /* some small fix */
 .us.ui.label{
     margin-bottom: 10px;
+}
+
+/* menu */
+#menuable{
+    cursor:pointer;
+    opacity: 1;
+}
+#menuable h2:hover .header,#menuable h2:hover  .content,#menuable h2:hover  i{
+    color: white !important;
+    text-shadow: 0px 0px 20px #FFF;
+}
+#menuable.menued{
+    position: fixed;
+    width: 100%;
+    top: -75px;
+    z-index: 10;
+    opacity: 0.7;
+}
+
+#menuable.menued:hover{
+    opacity: 1;
 }
