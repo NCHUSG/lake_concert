@@ -72,6 +72,7 @@ jQuery(function(){
     // submit
     $("#submit").click(function(){
         var form = $("#recruit-form");
+        $('.popup').popup('hide');
         submition = form.serializeArray();
         $("#upload-dimer").addClass("active");
         $.ajax({

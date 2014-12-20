@@ -8,27 +8,25 @@ try {
     //if() 開始徵文的時間判斷
     //throw new Exception("徵文尚未開始，敬請期待！");
     
-    if(!isset($_POST['name']))
-        $error["name"] = isset($error["name"]) ? $error["name"] . " 請輸入名字！" : "請輸入名字！";
+    if(!$_POST['name'])
+        $error["name"] = "請輸入名字！";
     else if(!preg_match("/^[-' a-z\x{4e00}-\x{9eff}]{1,20}$/iu",$_POST['name']))
-        $error["name"] = isset($error["name"]) ? $error["name"] . " 名字包含不合法字元！" : "名字包含不合法字元！";
-    if(!isset($_POST['email']))
-        $error["email"] = isset($error["email"]) ? $error["email"] . " 請輸入名字！" : "請輸入名字！";
+        $error["name"] = "名字包含不合法字元！";
+    if(!$_POST['email'])
+        $error["email"] = "請輸入信箱！";
     else if(!preg_match('/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/',$_POST['email']))
-        $error["email"] = isset($error["email"]) ? $error["email"] . " 不正確的信箱格式！" : "不正確的信箱格式！";
-    if(!isset($_POST['des']))
-        $error["des"] = isset($error["des"]) ? $error["des"] . " 請輸入名字！" : "請輸入名字！";
+        $error["email"] = "不正確的信箱格式！";
+    if(!$_POST['des'])
+        $error["des"] = "請輸入一段文字！";
     else if($_POST['des'] != strip_tags($_POST['des']))
-        $error["des"] = isset($error["des"]) ? $error["des"] . " 敘述包含不合法格式！" : "敘述包含不合法格式！";
-    if(!isset($_POST['img']))
-        $error["img"] = isset($error["img"]) ? $error["img"] . " 請輸入名字！" : "請輸入名字！";
+        $error["des"] = "敘述包含不合法字串！";
+    if(!$_POST['img'])
+        $error["img"] = "你的圖呢？";
     else if(!preg_match('/^http:\/\/i.imgur.com\/\w+\.\w+$/',$_POST['img']))
-        $error["img"] = isset($error["img"]) ? $error["img"] . " 圖片來源有誤！" : "圖片來源有誤！";
+        $error["img"] = "圖片來源有誤！";
 
     if(!isset($_POST['try'])){
-
         if(ENABLE_RECAPTCHA){
-
             if(!isset($_POST['g-recaptcha-response'])){
                 $error["g-recaptcha-response"] = "請確認您不是機器人！";
                 throw new Exception("請確認您不是機器人！", 1);
@@ -75,7 +73,7 @@ try {
         $response['error'] = $error;
 }
 
-// ob_clean();
+ob_clean();
 echo json_encode($response);
 
 ?>
