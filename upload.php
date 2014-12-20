@@ -10,7 +10,7 @@ try {
     
     if(!isset($_POST['name']))
         $error["name"] = isset($error["name"]) ? $error["name"] . " 請輸入名字！" : "請輸入名字！";
-    else if(preg_match('/\W/',$_POST['name']))
+    else if(!preg_match("/^[-' a-z\x{4e00}-\x{9eff}]{1,20}$/iu",$_POST['name']))
         $error["name"] = isset($error["name"]) ? $error["name"] . " 名字包含不合法字元！" : "名字包含不合法字元！";
     if(!isset($_POST['email']))
         $error["email"] = isset($error["email"]) ? $error["email"] . " 請輸入名字！" : "請輸入名字！";
@@ -75,7 +75,7 @@ try {
         $response['error'] = $error;
 }
 
-ob_clean();
+// ob_clean();
 echo json_encode($response);
 
 ?>
