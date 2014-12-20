@@ -14,11 +14,23 @@
 
 /* stript color */
 .index.stripe .header{
+    cursor:pointer;
+    transition: all 0.5s;
     color: #A1D7FF;
     text-shadow: 0px 0px 20px #000
 }
 .index.stripe .header .sub.header{
+    cursor:pointer;
+    transition: all 0.5s;
     color: #A1D7FF;
+    text-shadow: 0px 0px 20px #000
+}
+.index.stripe .header:hover{
+    color: #50FFBB;
+    text-shadow: 0px 0px 20px #000
+}
+.index.stripe .header:hover .sub.header{
+    color: #50FFBB;
     text-shadow: 0px 0px 20px #000
 }
 
@@ -51,12 +63,10 @@
 }
 
 /* frame */
-.frame{
-    /*width: 100%;*/
-}
 .frame.background{
     position: fixed;
     z-index: 1;
+    width: 100%;
 }
 .frame.filter{
     position: fixed;
@@ -99,7 +109,7 @@
     margin-right: auto !important;
 }
 .centerAligned{
-    text-align: center;
+    text-align: center !important;
 }
 .ui.hidable{
     opacity: 1;
@@ -228,4 +238,8 @@ div.ui.transparent.underlined.input{
 }
 .ui.button.fluid{
     margin-bottom: 5px;
+}
+.ui.inverted.recruit.segment{
+    background-color: rgba(215, 129, 95, 0.45) !important;
+    color: #FFF !important;
 }

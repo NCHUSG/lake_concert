@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div id="bg" class="background frame">
-			<img class="visible no md bg" src="http://i.imgur.com/cXPLRmEl.gif" alt="">
+			<img class="visible no md bg" src="https://i.imgur.com/Uw3bOy8.png" alt="">
 			<video class="visible on md bg" poster="//i.imgur.com/V1T7HZKh.jpg" preload="auto" autoplay="autoplay" muted="muted" loop="loop" webkit-playsinline="">
 				<source src="//i.imgur.com/V1T7HZK.webm" type="video/webm">
 				<source src="//i.imgur.com/V1T7HZK.mp4" type="video/mp4">
@@ -54,7 +54,7 @@
 				<div class="long stripe"></div>
 				<div class="ui page three column grid">
 					<div class="column">
-						<h2 class="ui icon centerized header">
+						<h2 href="#concert" class="ui icon centerized goto header" data-html="<h4>更多訊息</h4><p>大家想放啥</p>">
 							<i class="music icon"></i>
 							<div class="content">
 								音樂季
@@ -63,7 +63,7 @@
 						</h2>
 					</div>
 					<div class="column">
-						<h2 class="ui icon centerized header">
+						<h2 href="#recruit" class="ui icon centerized goto header" data-html="<h4>更多訊息</h4><p>大家想放啥</p>">
 							<i class="photo icon"></i>
 							<div class="content">
 								你我的大學回憶展覽
@@ -72,7 +72,7 @@
 						</h2>
 					</div>
 					<div class="column">
-						<h2 class="ui icon centerized header">
+						<h2 href="#vender" class="ui icon centerized goto header" data-html="<h4>更多訊息</h4><p>大家想放啥</p>">
 							<i class="tree icon"></i>
 							<div class="content">
 								湖畔小攤
@@ -107,7 +107,7 @@
 					</div>
 					<div class="column">
 						<h3 class="ui center aligned header">徵圖/文活動現正進行中！</h3>
-						<h4 class="ui center aligned header">
+						<h3 class="ui center aligned header">
 							把你/妳大一到大四值得紀念的相片找出來，<br>
 							寫下屬於你/妳的一句話，和中興同學一同分享，<br>
 							給自己一次勇敢的機會，也讓所有人知道你/妳的美麗！<br>
@@ -124,17 +124,19 @@
 							</div>
 							<input id="uploaded-href" type="hidden" name="img">
 						</form>
-							<div class="ui centerized orange inverted recruit segment">
-								<div id="shown-has-img">
-									<a id="img-preview" href="" class="ui fluid button" target="_blank">按我預覽</a>
-									<div id="submit" class="fluid positive ui button">送出，和大家分享你的回憶！</div>
-								</div>
-								<p id="uploader-des" class="centerAligned">把你想和大家分享的圖片拖曳至此或按下鈕選擇</p>
-								<input id="uploader" type="file" class="ui fluid button"></input>
-								<div id="upload-dimer" class="ui dimmer">
-									<div class="ui loader"></div>
+						<div class="ui centerized inverted recruit segment">
+							<div id="shown-has-img">
+								<a id="preview-btn" href="" class="ui fluid button" target="_blank">按我預覽</a>
+								<div id="submit" class="fluid positive ui button">送出，和大家分享你的回憶！</div>
+							</div>
+							<p id="uploader-des" class="centerAligned">把你想和大家分享的圖片拖曳至此或按下鈕選擇</p>
+							<input id="uploader" type="file" class="ui fluid button"></input>
+							<div id="upload-dimer" class="ui dimmer">
+								<div class="ui loader">
+									
 								</div>
 							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -162,15 +164,96 @@
 				敬請期待...
 				</h1>
 			</div>
-			<div id="footer" class="masthead footer short stripe">
-				<h1 class="ui center aligned header">
-				國立中興大學學生會
-				</h1>
+			<div id="footer" class="masthead footer stripe">
+				<div class="ui page one column grid">
+					<div class="centerAligned column">
+						<a target="_blank" href="http://nchusg.org/" class="ui image blue label">
+							<img src="http://i.imgur.com/zF2JgJ7s.jpg">
+							國立中興大學學生會
+							<div class="detail">主辦</div>
+						</a>
+						<a href="mailto:nchusg20@gmail.com" class="ui image blue label">
+							<i class="mail icon"></i>
+							nchusg20@gmail.com
+							<div class="detail">使用 Email 聯絡我們</div>
+						</a>
+						<a href="tel:0422873181" class="ui image blue label">
+							<i class="call icon"></i>
+							04-22873181 (245)
+							<div class="detail">使用電話聯絡我們</div>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		<!-- submit model -->
+		<div id="submit-confirm" class="ui modal">
+			<i class="close icon"></i>
+			<div class="header">
+				送出之前...
+			</div>
+			<div class="content">
+				<div class="ui two column middle aligned relaxed fitted stackable grid">
+					<div class="column">
+						<h3>我們可能這樣展示您的作品...</h3>
+						<div id="confirm" class="ui raised segment">
+							<a id="confirm-name" class="ui ribbon blue label"></a>
+							<img id="confirm-img" class="ui bordered centered image" src="">
+							<div id="confirm-des" class="ui pointing centerized teal label"></div>
+						</div>
+						<h3>並且我們可以透過這個電子郵件聯絡您</h3>
+						<div class="ui label">
+							<span id="confirm-email"></span>
+							<a class="detail"><i class="mail icon"></i></a>
+						</div>
+					</div>
+					<div class="column">
+						<h3>麻煩確認並同意以下事項</h3>
+						<p>所有參與徵稿之作品及原稿數位檔案之著作財產權歸原著所有，唯參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉於活動中無償使用作品。本會壅有素材或影片創意重製、公開展示之權利，均不另予通知及致酬。經公布獲展之作品，著作人不得要求取消獲展資格。參展作品不得冒名、抄襲、複製他人之作品，亦不得以夫妻、子女、朋友或任何關係，將參展作品之著作權讓與、買賣以行冒名頂替參展之實，違者經查證屬實將依法除名，不予展覽。凡參賽即視同認可並接受本簡章之各項規定。</p>
+						<p>參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉為保護您的個人資料，依據個人資料保護法規定，於提供良好服務及執行職務或業務之必要範圍內蒐集、處理及利用您的個人資料。您同意本會以您所提供的個人資料確認您的身份、與您進行連絡、於展覽現場標誌，以及其他隱私權保護政策規範之使用方式。非在您同意下，本會不會將您的資料提供於本會外使用，您對於本會保有您的個人資料部分，日後仍得享有下列權利：一、得向本會查詢、請求閱覽、請求製給複製本。而本會依法得酌收必要成本費用。二、得向本會請求補充或更正。惟依法您應為適當之釋明。三、得向本會請求停止蒐集、處理或利用及請求刪除您的個人資料。</p>
+						<form id="confirm-form" action="upload.php" method="POST">
+							<div class="g-recaptcha" data-sitekey="6LdRg_8SAAAAAGwlJK0s4BOLY8BupKoBcRGJyprD"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="actions">
+				<div class="ui black button">
+					不了
+				</div>
+				<div id="confirmed" class="ui positive right labeled icon button">
+					我同意，和大家分享我的回憶！
+					<i class="checkmark icon"></i>
+				</div>
+			</div>
+		</div>
+
+		<!-- complete model -->
+		<div id="complete" class="ui basic modal">
+			<i class="close icon"></i>
+			<div class="header">
+				結果...
+			</div>
+			<div class="content">
+				<p id="result"></p>
+			</div>
+			<div class="actions">
+				<div class="one fluid ui inverted buttons">
+				<div class="ui green basic inverted button">
+					<i class="checkmark icon"></i>
+					了解
+				</div>
+				</div>
+			</div>
+		</div>
+
 		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.11/jquery.scrollTo.min.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script>
+			var debug;
 			jQuery(function(){
 				// filter bg transition
 				var refresh_inteval = false;
@@ -194,21 +277,37 @@
 				$(window).scroll(change_bg);
 				change_bg();
 
+				// goto
+				$("#index .goto").click(function(){
+					$('body').scrollTo( $($(this).attr("href")), 800 );
+				}).popup({
+					position:'bottom center'
+				});
+
 				// uploader
 				function upload(file) { // Copied from https://github.com/paulrouget/miniuploader
-					if (!file || !file.type.match(/image.*/)) return;
+					if (!file || !file.type.match(/image.*/)){
+						alert("這個不是圖片吧！");
+						return;
+					}
 					$("#upload-dimer").addClass("active");
 					var fd = new FormData();
 					fd.append("image", file);
 					var xhr = new XMLHttpRequest();
 					xhr.open("POST", "https://api.imgur.com/3/image.json");
-					xhr.onload = function() {
-						var link = JSON.parse(xhr.responseText).data.link;
-						$("#uploaded-href").attr("value",link);
-						$("#upload-dimer").removeClass("active");
-						$("#img-preview").attr("href",link);
-						$("#shown-has-img").slideDown();
-						$("#uploader-des").slideUp();
+					xhr.onreadystatechange = function() {
+						if (xhr.readyState === 4) {
+							if (xhr.status === 200) {
+								var link = JSON.parse(xhr.responseText).data.link;
+								$("#uploaded-href").attr("value",link);
+								$("#upload-dimer").removeClass("active");
+								$("#preview-btn").attr("href",link);
+								$("#shown-has-img").slideDown();
+								$("#uploader-des").slideUp();
+							} else {
+								alert("喔不，圖片有問題或是傳送失敗！");
+							}
+						}
 					};
 					xhr.setRequestHeader('Authorization', 'Client-ID 4b9752a7616a955');
 					// Get your own key http://api.imgur.com/
@@ -221,11 +320,96 @@
 					upload(this.files[0]);
 				});
 
+				function closeMyPopup(){
+					$(this).popup('hide');
+				}
+				var submition;
 				// submit
 				$("#submit").click(function(){
-					var data = $("#recruit-form").serializeArray();
-					console.log(data);
+					var form = $("#recruit-form");
+					submition = form.serializeArray();
+					$("#upload-dimer").addClass("active");
+					$.ajax({
+						url:form.attr('action'),
+						dataType:'json',
+						type:form.attr('method'),
+						data:submition.concat([{name:"try",value:true}]),
+						success:function(res){
+							debug = res;
+							if(res.result != "OK"){
+								if(res.error){
+									var err = res.error;
+									for(var k in err){
+										$("input[name="+k+"]").popup({
+											content:err[k],
+											on:'manual',
+										}).popup('show').click(closeMyPopup);
+									}
+								}else{
+									alert("喔不，發生錯誤: " + res);
+									debug = res;
+								}
+							}
+							else{
+								var confirm = {};
+								for(var k in submition){
+									confirm[submition[k].name] = submition[k].value;
+								}
+								$("#confirm-email").text(confirm.email);
+								$("#confirm-des").text(confirm.des);
+								$("#confirm-img").attr("src",confirm.img);
+								$("#confirm-name").text(confirm.name + " 同學");
+								$('#submit-confirm').modal({onApprove:confirm_send}).modal('show');
+							}
+						},
+						error:function(xhr,e){
+							debug = e;
+							alert("喔不，發生錯誤: " + e);
+						},
+						complete:function(){
+							$("#upload-dimer").removeClass("active");
+						}
+					});
 				});
+
+				function confirm_send(){
+					var form = $("#confirm-form");
+					$("#upload-dimer").addClass("active");
+					$.ajax({
+						url:form.attr('action'),
+						dataType:'json',
+						type:form.attr('method'),
+						data:submition.concat(form.serializeArray()),
+						success:function(res){
+							console.log(res);
+							debug = res;
+							var result = "";
+							if(res.result != "OK"){
+								if(res.error){
+									var err = res.error;
+									for(var k in err)
+										result += err[k] + " ";
+								}
+								else{
+									result += "喔不，發生錯誤:" + res;
+								}
+							}
+							else
+								result += "感謝您的參與！您可以再上傳更多相片！";
+							$("#result").text(result);
+						},
+						error:function(xhr,e){
+							debug = e;
+							$("#result").text("喔不，發生錯誤: " + e);
+						},
+						complete:function(){
+							setTimeout(function(){
+								$('#complete').modal('show',{queue:true});
+								$("#upload-dimer").removeClass("active");
+							},1000);
+						}
+					});
+				}
 			});
 		</script>
 	</body>
