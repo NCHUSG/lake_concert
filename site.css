@@ -243,3 +243,8 @@ div.ui.transparent.underlined.input{
     background-color: rgba(215, 129, 95, 0.45) !important;
     color: #FFF !important;
 }
+
+/* some small fix */
+.us.ui.label{
+    margin-bottom: 10px;
+}

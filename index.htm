@@ -54,7 +54,7 @@
 				<div class="long stripe"></div>
 				<div class="ui page three column grid">
 					<div class="column">
-						<h2 href="#concert" class="ui icon centerized goto header" data-html="<h4>更多訊息</h4><p>大家想放啥</p>">
+						<h2 href="#concert" class="ui icon centerized goto header" data-html="敬請期待！">
 							<i class="music icon"></i>
 							<div class="content">
 								音樂季
@@ -63,16 +63,17 @@
 						</h2>
 					</div>
 					<div class="column">
-						<h2 href="#recruit" class="ui icon centerized goto header" data-html="<h4>更多訊息</h4><p>大家想放啥</p>">
+						<h2 href="#recruit" class="ui icon centerized goto header" data-html="準備中！目前上傳功能純粹測試用，輸入的資料都將不會被紀錄！正式開始日期將再另外公布！">
 							<i class="photo icon"></i>
 							<div class="content">
 								你我的大學回憶展覽
-							<div class="sub header">徵圖/文活動現正進行中！</div>
+							<div class="sub header">徵圖/文活動準備中！</div>
+							<!-- <div class="sub header">徵圖/文活動現正進行中！</div> -->
 							</div>
 						</h2>
 					</div>
 					<div class="column">
-						<h2 href="#vender" class="ui icon centerized goto header" data-html="<h4>更多訊息</h4><p>大家想放啥</p>">
+						<h2 href="#vender" class="ui icon centerized goto header" data-html="敬請期待！">
 							<i class="tree icon"></i>
 							<div class="content">
 								湖畔小攤
@@ -106,7 +107,7 @@
 						<h3 class="ui center aligned header">讓青春回憶如繁星，永恆</h3>
 					</div>
 					<div class="column">
-						<h3 class="ui center aligned header">徵圖/文活動現正進行中！</h3>
+						<h3 class="ui center aligned header">徵圖/文活動準備中！</h3>
 						<h3 class="ui center aligned header">
 							把你/妳大一到大四值得紀念的相片找出來，<br>
 							寫下屬於你/妳的一句話，和中興同學一同分享，<br>
@@ -167,17 +168,17 @@
 			<div id="footer" class="masthead footer stripe">
 				<div class="ui page one column grid">
 					<div class="centerAligned column">
-						<a target="_blank" href="http://nchusg.org/" class="ui image blue label">
+						<a target="_blank" href="http://nchusg.org/" class="ui us image blue label">
 							<img src="http://i.imgur.com/zF2JgJ7s.jpg">
 							國立中興大學學生會
 							<div class="detail">主辦</div>
 						</a>
-						<a href="mailto:nchusg20@gmail.com" class="ui image blue label">
+						<a href="mailto:nchusg20@gmail.com" class="ui us image blue label">
 							<i class="mail icon"></i>
 							nchusg20@gmail.com
 							<div class="detail">使用 Email 聯絡我們</div>
 						</a>
-						<a href="tel:0422873181" class="ui image blue label">
+						<a href="tel:0422873181" class="ui us image blue label">
 							<i class="call icon"></i>
 							04-22873181 (245)
 							<div class="detail">使用電話聯絡我們</div>
@@ -252,165 +253,17 @@
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.11/jquery.scrollTo.min.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script src='site.js'></script>
+
+		<!-- google analytics -->
 		<script>
-			var debug;
-			jQuery(function(){
-				// filter bg transition
-				var refresh_inteval = false;
-				function change_bg(){
-					if(!refresh_inteval){
-						if($(document).scrollTop() > $('#vender').position().top - $(window).height()/2)
-							$("#filter").attr("class",'filter vender frame');
-						else if($(document).scrollTop() > $('#concert').position().top - $(window).height()/2)
-							$("#filter").attr("class",'filter concert frame');
-						else if($(document).scrollTop() > $('#recruit').position().top - $(window).height()/2)
-							$("#filter").attr("class",'filter recruit-bg frame');
-						else if($(document).scrollTop() > $('#des').position().top - $(window).height()/2)
-							$("#filter").attr("class",'filter des frame');
-						else
-							$("#filter").attr("class",'filter frame');
-					}
-					refresh_inteval = setTimeout(function(){
-					    refresh_inteval = false;
-					},200);
-				}
-				$(window).scroll(change_bg);
-				change_bg();
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-				// goto
-				$("#index .goto").click(function(){
-					$('body').scrollTo( $($(this).attr("href")), 800 );
-				}).popup({
-					position:'bottom center'
-				});
-
-				// uploader
-				function upload(file) { // Copied from https://github.com/paulrouget/miniuploader
-					if (!file || !file.type.match(/image.*/)){
-						alert("這個不是圖片吧！");
-						return;
-					}
-					$("#upload-dimer").addClass("active");
-					var fd = new FormData();
-					fd.append("image", file);
-					var xhr = new XMLHttpRequest();
-					xhr.open("POST", "https://api.imgur.com/3/image.json");
-					xhr.onreadystatechange = function() {
-						if (xhr.readyState === 4) {
-							if (xhr.status === 200) {
-								var link = JSON.parse(xhr.responseText).data.link;
-								$("#uploaded-href").attr("value",link);
-								$("#upload-dimer").removeClass("active");
-								$("#preview-btn").attr("href",link);
-								$("#shown-has-img").slideDown();
-								$("#uploader-des").slideUp();
-							} else {
-								alert("喔不，圖片有問題或是傳送失敗！");
-							}
-						}
-					};
-					xhr.setRequestHeader('Authorization', 'Client-ID 4b9752a7616a955');
-					// Get your own key http://api.imgur.com/
-					xhr.send(fd);
-				}
-				
-				window.ondragover = function(e) { e.preventDefault(); };
-				window.ondrop = function(e) { e.preventDefault(); upload(e.dataTransfer.files[0]); };
-				$("#uploader").change(function(){
-					upload(this.files[0]);
-				});
-
-				function closeMyPopup(){
-					$(this).popup('hide');
-				}
-				var submition;
-				// submit
-				$("#submit").click(function(){
-					var form = $("#recruit-form");
-					submition = form.serializeArray();
-					$("#upload-dimer").addClass("active");
-					$.ajax({
-						url:form.attr('action'),
-						dataType:'json',
-						type:form.attr('method'),
-						data:submition.concat([{name:"try",value:true}]),
-						success:function(res){
-							debug = res;
-							if(res.result != "OK"){
-								if(res.error){
-									var err = res.error;
-									for(var k in err){
-										$("input[name="+k+"]").popup({
-											content:err[k],
-											on:'manual',
-										}).popup('show').click(closeMyPopup);
-									}
-								}else{
-									alert("喔不，發生錯誤: " + res);
-									debug = res;
-								}
-							}
-							else{
-								var confirm = {};
-								for(var k in submition){
-									confirm[submition[k].name] = submition[k].value;
-								}
-								$("#confirm-email").text(confirm.email);
-								$("#confirm-des").text(confirm.des);
-								$("#confirm-img").attr("src",confirm.img);
-								$("#confirm-name").text(confirm.name + " 同學");
-								$('#submit-confirm').modal({onApprove:confirm_send}).modal('show');
-							}
-						},
-						error:function(xhr,e){
-							debug = e;
-							alert("喔不，發生錯誤: " + e);
-						},
-						complete:function(){
-							$("#upload-dimer").removeClass("active");
-						}
-					});
-				});
-
-				function confirm_send(){
-					var form = $("#confirm-form");
-					$("#upload-dimer").addClass("active");
-					$.ajax({
-						url:form.attr('action'),
-						dataType:'json',
-						type:form.attr('method'),
-						data:submition.concat(form.serializeArray()),
-						success:function(res){
-							console.log(res);
-							debug = res;
-							var result = "";
-							if(res.result != "OK"){
-								if(res.error){
-									var err = res.error;
-									for(var k in err)
-										result += err[k] + " ";
-								}
-								else{
-									result += "喔不，發生錯誤:" + res;
-								}
-							}
-							else
-								result += "感謝您的參與！您可以再上傳更多相片！";
-							$("#result").text(result);
-						},
-						error:function(xhr,e){
-							debug = e;
-							$("#result").text("喔不，發生錯誤: " + e);
-						},
-						complete:function(){
-							setTimeout(function(){
-								$('#complete').modal('show',{queue:true});
-								$("#upload-dimer").removeClass("active");
-							},1000);
-						}
-					});
-				}
-			});
+		  ga('create', 'UA-57884346-1', 'auto');
+		  ga('send', 'pageview');
 		</script>
 	</body>
 </html>

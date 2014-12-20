@@ -5,6 +5,9 @@ include("setting.php");
 $response = array();
 $error = array();
 try {
+    //if() 開始徵文的時間判斷
+    //throw new Exception("徵文尚未開始，敬請期待！");
+    
     if(!isset($_POST['name']))
         $error["name"] = isset($error["name"]) ? $error["name"] . " 請輸入名字！" : "請輸入名字！";
     else if(preg_match('/\W/',$_POST['name']))
@@ -28,11 +31,11 @@ try {
 
             if(!isset($_POST['g-recaptcha-response'])){
                 $error["g-recaptcha-response"] = "請確認您不是機器人！";
-                throw new Exception("Error Processing Request", 1);
+                throw new Exception("請確認您不是機器人！", 1);
             }
             if(!$_POST['g-recaptcha-response']){
                 $error["g-recaptcha-response"] = "請確認您不是機器人！";
-                throw new Exception("Error Processing Request", 1);
+                throw new Exception("請確認您不是機器人！", 1);
             }
             $url = RECAPTCHA_URL;
             $secret = RECAPTCHA_SECRET;
@@ -42,7 +45,7 @@ try {
             $capcha = json_decode(file_get_contents("$url?secret=$secret&response=$recaptcha&remoteip=$remoteip"));
             if(!$capcha->success){
                 $error["g-recaptcha-response"] = "請確認您不是機器人！";
-                throw new Exception("Error Processing Request", 1);
+                throw new Exception("請確認您不是機器人！", 1);
             }
         }
 
@@ -56,16 +59,18 @@ try {
             "email" => $_POST["email"],
             "des" => $_POST["des"],
             "img" => $_POST["img"],
+            "time" => date("Y-m-d H:i:s"),
+            "ip" => $remoteip
         );
 
         file_put_contents(SUBMITION_FILE_NAME,json_encode($submition));
     }
 
     if(count($error) != 0)
-        throw new Exception("Error Processing Request", 1);
+        throw new Exception("Theres some errors!", 1);
     $response["result"] = "OK";
 } catch (Exception $e) {
-    $response["result"] = "Not accepted";
+    $response["result"] = $e->getMessage();
     if(count($error) != 0)
         $response['error'] = $error;
 }
