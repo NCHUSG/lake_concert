@@ -1,10 +1,10 @@
 var debug;
 jQuery(function(){
     // filter bg transition
-    var refresh_inteval = false;
+    // var refresh_inteval = false;
     var filter_frame_ori_class = $("#filter").attr("class");
     function change_bg(){
-        if(!refresh_inteval){
+        // if(!refresh_inteval){
             // console.log("change triggered!");
             if($(document).scrollTop() > $('#vender').position().top - $(window).height()/2)
                 $("#filter").attr("class",filter_frame_ori_class + ' vender');
@@ -22,11 +22,11 @@ jQuery(function(){
             else
                 $("#menuable").removeClass("menued");
             
-            refresh_inteval = true;
-            setTimeout(function(){
-                refresh_inteval = false;
-            },75);
-        }
+        //     refresh_inteval = true;
+        //     setTimeout(function(){
+        //         refresh_inteval = false;
+        //     },75);
+        // }
     }
     $(window).scroll(change_bg);
     change_bg();
