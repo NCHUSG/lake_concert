@@ -2,28 +2,31 @@ var debug;
 jQuery(function(){
     // filter bg transition
     var refresh_inteval = false;
+    var filter_frame_ori_class = $("#filter").attr("class");
     function change_bg(){
         if(!refresh_inteval){
-            console.log("change_bg triggered!");
+            // console.log("change triggered!");
             if($(document).scrollTop() > $('#vender').position().top - $(window).height()/2)
-                $("#filter").attr("class",'filter vender frame');
+                $("#filter").attr("class",filter_frame_ori_class + ' vender');
             else if($(document).scrollTop() > $('#concert').position().top - $(window).height()/2)
-                $("#filter").attr("class",'filter concert frame');
+                $("#filter").attr("class",filter_frame_ori_class + ' concert');
             else if($(document).scrollTop() > $('#recruit').position().top - $(window).height()/2)
-                $("#filter").attr("class",'filter recruit frame');
+                $("#filter").attr("class",filter_frame_ori_class + ' recruit');
             else if($(document).scrollTop() > $('#des').position().top - $(window).height()/2)
-                $("#filter").attr("class",'filter des frame');
+                $("#filter").attr("class",filter_frame_ori_class + ' des');
             else
-                $("#filter").attr("class",'filter frame');
+                $("#filter").attr("class",filter_frame_ori_class);
 
             if($(document).scrollTop() > $("#menu-enabler").position().top + 280)
                 $("#menuable").addClass("menued");
             else
                 $("#menuable").removeClass("menued");
+            
+            refresh_inteval = true;
+            setTimeout(function(){
+                refresh_inteval = false;
+            },75);
         }
-        refresh_inteval = setTimeout(function(){
-            refresh_inteval = false;
-        },200);
     }
     $(window).scroll(change_bg);
     change_bg();
@@ -54,7 +57,7 @@ jQuery(function(){
                     $("#upload-dimer").removeClass("active");
                     $("#preview-btn").attr("href",link);
                     $("#shown-has-img").slideDown();
-                    $("#uploader-des").slideUp();
+                    // $("#uploader-des").slideUp();
                 } else {
                     alert("喔不，圖片有問題或是傳送失敗！");
                 }
@@ -108,6 +111,7 @@ jQuery(function(){
                         confirm[submition[k].name] = submition[k].value;
                     }
                     $("#confirm-email").text(confirm.email);
+                    $("#confirm-phone").text(confirm.phone);
                     $("#confirm-des").text(confirm.des);
                     $("#confirm-img").attr("src",confirm.img);
                     $("#confirm-name").text(confirm.name + " 同學");

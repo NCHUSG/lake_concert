@@ -75,16 +75,15 @@
 				<div id="menu-enabler" class="long stripe"></div>
 				<div id="menuable" class="ui page three column grid">
 					<div class="column">
-						<h2 href="#recruit" class="ui recruit icon centerized goto header" data-html="準備中！目前上傳功能純粹測試用，輸入的資料都將不會被紀錄！正式開始日期將再另外公布！">
+						<h2 href="#recruit" class="ui recruit icon centerized goto header" data-html="歡迎大家在這個地方，寫下你和朋友們曾經發生過的感動、愉快，不論是丟湖、綁樹、刮鬍泡的好笑畫面；還是和朋友夜衝、夜唱、煮火鍋的有趣回憶；或者是系隊、盃賽、主任盃的開心淚水，寫下來，讓大家一同參與。">
 							<i class="photo icon"></i>
 							<div class="content">
 								大學回憶
-							<div class="sub header">徵圖/文活動準備中！</div>
-							<!-- <div class="sub header">徵圖/文活動現正進行中！</div> -->
+							<div class="sub header">我們需要！你的故事！</div>
 							</div>
 						</h2>
 					</div>
-                    <div class="column">
+					<div class="column">
 						<h2 href="#concert" class="ui concert icon centerized goto header" data-html="敬請期待！">
 							<i class="music icon"></i>
 							<div class="content">
@@ -105,6 +104,7 @@
 				</div>
 			</div>
 			<div id="des" class="masthead des viewport-height stripe">
+				<div class="long stripe"></div>
 				<h3 class="ui center aligned header">十八歲，你還怎麼青澀；貳拾貳，你又怎麼成熟</h3>
 				<h3 class="ui center aligned header">在無數次邁向下一個階段，我們留下的腳印或回憶，仍光輝閃爍</h3>
 				<h3 class="ui center aligned header">只是隨著太陽月亮，它們總會黯淡…</h3>
@@ -114,26 +114,48 @@
 				<h3 class="ui center aligned header">讓青春回憶如繁星，永恆</h3>
 			</div>
 			<div id="recruit" class="masthead recruit viewport-height stripe">
+				<div class="short stripe"></div>
 				<div class="ui page two column middle aligned relaxed fitted stackable grid">
 					<div class="column">
 						<h2 class="ui icon centerized header">
 							<i class="photo icon"></i>
 							<div class="content">
 								你我的大學回憶展覽
+							<div class="sub header">年輕人的歌，唱給年輕人聽。</div>
 							</div>
 						</h2>
-						<h3 class="ui center aligned header">我們把腳印收集起來，寫下每一刻的故事</h3>
-						<h3 class="ui center aligned header">告訴所有人：我們曾經勇敢，曾經美麗；</h3>
-						<h3 class="ui center aligned header">我們走過悲傷，也擁抱過笑容</h3>
-						<h3 class="ui center aligned header">讓青春回憶如繁星，永恆</h3>
+						<h3 class="ui center aligned header">
+							在你的大學生活中<br>
+							是不是有什麼事情讓你忘不掉？<br>
+							那些愉快的、甜蜜的、尷尬的、熱血的故事<br>
+							現在，讓大家看見你的故事！<br>
+							把你值得紀念的故事告訴我們吧！
+						</h3>
+						<div id="confirm" class="ui inverted cus-orange raised segment">
+							<a class="ui ribbon blue label">徵稿範例</a>
+							<img class="ui bordered centered image" src="http://i.imgur.com/qW0xEv4.jpg">
+							<div class="ui pointing centerized teal label">美麗的花火，閃耀我們心血和努力，你們，才是黑夜中最值得寄託的歸屬!</div>
+						</div>
 					</div>
 					<div class="column">
-						<h3 class="ui center aligned header">徵圖/文活動準備中！</h3>
 						<h3 class="ui center aligned header">
-							把你/妳大一到大四值得紀念的相片找出來，<br>
+							把你/妳大一到大四值得紀念的回憶找出來，<br>
 							寫下屬於你/妳的一句話，和中興同學一同分享，<br>
-							給自己一次勇敢的機會，也讓所有人知道你/妳的美麗！<br>
-						</h4>
+							給自己一次勇敢的機會，更讓別人也擁有這個回憶！<br>
+						</h3>
+						<div class="ui centerized recruit-input">
+							<h4 class="ui left aligned header">
+								《投稿辦法》<br>
+								1.相片+文字 (直接上傳)<br>
+								2.圖畫+文字 (請將圖畫拍下後上傳)<br>
+								3.實體物品+文字 (請將物品拍下後上傳)<br>
+								【格式】<br>
+								文字：字數不限，只要能夠清楚表達你的故事！<br>
+								相片：需300dpi以上<br>
+								圖畫：長不超過120cm，寬不超過65cm<br>
+								實體物品：不限，但以小東西為主<br>
+							</h4>
+						</div>
 						<form id="recruit-form" action="upload.php" method="POST">
 							<div class="ui centerized massive transparent recruit-input underlined input">
 							  <input name="name" placeholder="你/妳的名字..." type="text">
@@ -142,27 +164,29 @@
 							  <input name="email" placeholder="你/妳的信箱..." type="email">
 							</div>
 							<div class="ui centerized massive transparent recruit-input underlined input">
+							  <input name="phone" placeholder="你/妳的電話號碼..." type="text">
+							</div>
+							<div class="ui centerized massive transparent recruit-input underlined input">
 							  <input name="des" placeholder="一段說明文字..." type="text">
 							</div>
 							<input id="uploaded-href" type="hidden" name="img">
 						</form>
-						<div class="ui centerized inverted recruit-input segment">
+						<div class="ui centerized inverted cus-orange recruit-input segment">
+							<p id="uploader-des" class="centerAligned">把你想和大家分享的圖片拖曳至此或按下鈕選擇</p>
+							<input id="uploader" type="file" class="ui fluid button"></input>
 							<div id="shown-has-img">
 								<a id="preview-btn" href="" class="ui fluid button" target="_blank">按我預覽</a>
 								<div id="submit" class="fluid positive ui button">送出，和大家分享你的回憶！</div>
 							</div>
-							<p id="uploader-des" class="centerAligned">把你想和大家分享的圖片拖曳至此或按下鈕選擇</p>
-							<input id="uploader" type="file" class="ui fluid button"></input>
 							<div id="upload-dimer" class="ui dimmer">
-								<div class="ui loader">
-									
-								</div>
+								<div class="ui loader"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="concert" class="masthead concert viewport-height stripe">
+				<div class="short stripe"></div>
 				<h2 class="ui icon centerized header">
 					<i class="music icon"></i>
 					<div class="content">
@@ -175,6 +199,7 @@
 				</h1>
 			</div>
 			<div id="vender" class="masthead vender viewport-height stripe">
+				<div class="short stripe"></div>
 				<h2 class="ui icon centerized header">
 					<i class="tree icon"></i>
 					<div class="content">
@@ -224,10 +249,14 @@
 							<img id="confirm-img" class="ui bordered centered image" src="">
 							<div id="confirm-des" class="ui pointing centerized teal label"></div>
 						</div>
-						<h3>並且我們可以透過這個電子郵件聯絡您</h3>
+						<h3>並且我們可以透過下列方式聯絡您</h3>
 						<div class="ui label">
 							<span id="confirm-email"></span>
 							<a class="detail"><i class="mail icon"></i></a>
+						</div>
+						<div class="ui label">
+							<span id="confirm-phone"></span>
+							<a class="detail"><i class="call icon"></i></a>
 						</div>
 					</div>
 					<div class="column">

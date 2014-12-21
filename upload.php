@@ -14,8 +14,12 @@ try {
         $error["name"] = "名字包含不合法字元！";
     if(!$_POST['email'])
         $error["email"] = "請輸入信箱！";
-    else if(!preg_match('/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/',$_POST['email']))
+    else if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
         $error["email"] = "不正確的信箱格式！";
+    if(!$_POST['phone'])
+        $error["phone"] = "請輸入電話號碼！";
+    else if(!preg_match('/^09\d{8}$/',$_POST['phone']))
+        $error["phone"] = "不正確的電話號碼！";
     if(!$_POST['des'])
         $error["des"] = "請輸入一段文字！";
     else if($_POST['des'] != strip_tags($_POST['des']))
@@ -41,6 +45,8 @@ try {
             $remoteip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
 
             $capcha = json_decode(file_get_contents("$url?secret=$secret&response=$recaptcha&remoteip=$remoteip"));
+
+            $agree = $capcha->success;
             if(!$capcha->success){
                 $error["g-recaptcha-response"] = "請確認您不是機器人！";
                 throw new Exception("請確認您不是機器人！", 1);
@@ -55,10 +61,12 @@ try {
         $submition[] = array(
             "name" => $_POST["name"],
             "email" => $_POST["email"],
+            "phone" => $_POST["phone"],
             "des" => $_POST["des"],
             "img" => $_POST["img"],
             "time" => date("Y-m-d H:i:s"),
-            "ip" => $remoteip
+            "ip" => $remoteip,
+            "agree" => $agree
         );
 
         file_put_contents(SUBMITION_FILE_NAME,json_encode($submition));
