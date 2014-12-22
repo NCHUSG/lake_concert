@@ -1,5 +1,11 @@
 var debug;
 jQuery(function(){
+		var alert_message = {
+			not_image: "您上傳的內容不是圖片，請修正",
+			imgur_error: "圖片上傳出現問題，請稍後嘗試或更換圖片",
+			post_error: "投稿內容受理失敗，錯誤內容如下\n",
+			post_success: "投稿已受理，您仍可繼續投稿其他內容"
+		};
     // filter bg transition
     var refresh_inteval = false;
     var filter_frame_ori_class = $("#filter").attr("class");
@@ -41,7 +47,7 @@ jQuery(function(){
     // uploader
     function upload(file) { // Copied from https://github.com/paulrouget/miniuploader
         if (!file || !file.type.match(/image.*/)){
-            alert("這個不是圖片吧！");
+            alert(alert_message.not_image);
             return;
         }
         $("#upload-dimer").addClass("active");
@@ -59,7 +65,7 @@ jQuery(function(){
                     $("#shown-has-img").slideDown();
                     // $("#uploader-des").slideUp();
                 } else {
-                    alert("喔不，圖片有問題或是傳送失敗！");
+                    alert(alert_message.imgur_error);
                 }
             }
         };
@@ -101,7 +107,7 @@ jQuery(function(){
                             }).popup('show').click(closeMyPopup);
                         }
                     }else{
-                        alert("喔不，發生錯誤: " + res.result);
+                        alert(alert_message.post_error + res.result);
                         debug = res;
                     }
                 }
@@ -120,7 +126,7 @@ jQuery(function(){
             },
             error:function(xhr,e){
                 debug = e;
-                alert("喔不，發生錯誤: " + e);
+                alert(alert_message.post_error + e);
             },
             complete:function(){
                 $("#upload-dimer").removeClass("active");
@@ -147,11 +153,11 @@ jQuery(function(){
                             result += err[k] + " ";
                     }
                     else{
-                        result = "喔不，發生錯誤:" + res.result;
+                        result = alert_message.post_error + res.result;
                     }
                 }
                 else{
-                    result = "感謝您的參與！您可以再上傳更多相片！";
+                    result = alert_message.post_success;
                     setTimeout(function(){
                         $('input#uploader').prop("value","");
                         $("input[name=des]").prop("value","");
@@ -165,7 +171,7 @@ jQuery(function(){
             },
             error:function(xhr,e){
                 debug = e;
-                $("#result").text("喔不，發生錯誤: " + e);
+                $("#result").text(alert_message.post_error + e);
             },
             complete:function(){
                 setTimeout(function(){
