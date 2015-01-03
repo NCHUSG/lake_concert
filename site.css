@@ -35,12 +35,13 @@
 
 /* stript and filter color */
 .index.stripe .header,.index.stripe h1,.index.stripe h2,.index.stripe h3,.index.stripe h4,.index.stripe h5,.index.stripe i,.index{
-    color: #39C7FF !important;
-    text-shadow: 0px 0px 20px #001BE9;
+    color: #33CC99 !important;
+    text-shadow: 0px 0px 20px #909090;
 }
 
 .des.stripe .header,.des.stripe h1,.des.stripe h2,.des.stripe h3,.des.stripe h4,.des.stripe h5,.des.stripe i{
-    color: #DED8B7 !important;
+    /*color: #DED8B7 !important;*/
+    color: #FFFDD6 !important;
     text-shadow: 0px 0px 20px #000;
 }
 .frame.filter.des{
@@ -253,6 +254,7 @@ div.ui.transparent.underlined.input{
         width: 100%;
         top: -75px;
         z-index: 10;
+        left: 0;
     }
 
     #menuable.menued h2 .header,#menuable.menued h2 .content,#menuable.menued h2 i{
