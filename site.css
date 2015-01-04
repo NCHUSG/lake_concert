@@ -80,7 +80,7 @@
 }
 
 /* header */
-@media (min-width: 700px){
+@media (min-width: 1050px){
     .ui.header.massive{
         font-size: 5em;
     }
@@ -241,6 +241,16 @@ div.ui.transparent.underlined.input{
     -o-transition: color 0.5s,opacity 0.5s;
     transition: color 0.5s,opacity 0.5s;
     cursor:pointer;
+}
+#menuable #to-top{
+    display: none !important;
+}
+#menuable #to-top img{
+    width:50px;
+    margin-top:80px;
+}
+#menuable.menued #to-top{
+    display: inline-block !important;
 }
 #menuable h2:hover .header,#menuable h2:hover .content,#menuable h2:hover i{
     color: white !important;
