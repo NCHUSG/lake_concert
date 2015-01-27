@@ -241,34 +241,45 @@ div.ui.transparent.underlined.input{
     -o-transition: color 0.5s,opacity 0.5s;
     transition: color 0.5s,opacity 0.5s;
     cursor:pointer;
+
 }
 #menuable #to-top{
     display: none !important;
-}
-#menuable #to-top img{
-    width:50px;
-    margin-top:80px;
-}
-#menuable.menued #to-top{
-    display: inline-block !important;
 }
 #menuable h2:hover .header,#menuable h2:hover .content,#menuable h2:hover i{
     color: white !important;
     text-shadow: 0px 0px 10px #000;
     opacity: 0.99 !important;
 }
-
 @media (min-width: 700px){
+    #menuable{
+        -webkit-transition: background-color 0.5s;
+        -o-transition: background-color 0.5s;
+        transition: background-color 0.5s;
+        background-color: rgba(12, 103, 82, 0);
+    }
     #menuable.menued{
+        background-color: rgba(12, 103, 82, 1);
         position: fixed;
-        width: 100%;
+        width: 101%;
         top: -75px;
         z-index: 10;
         left: 0;
     }
-
     #menuable.menued h2 .header,#menuable.menued h2 .content,#menuable.menued h2 i{
-        opacity: 0.4;
+        /* opacity: 0.4; */
+        color:white !important;
+    }
+    #menuable.menued div.column{
+        padding-bottom:0;
+    }
+
+    #menuable #to-top img{
+        width:50px;
+        margin-top:80px;
+    }
+    #menuable.menued #to-top{
+        display: inline-block !important;
     }
 }
 
