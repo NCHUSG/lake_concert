@@ -336,7 +336,7 @@
 						<p>所有參與徵稿之作品及原稿數位檔案之著作財產權歸原著所有，唯參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉於活動中無償使用作品。本會擁有素材或影片創意重製、公開展示之權利，均不另予通知及致酬。經公布獲展之作品，著作人不得要求取消獲展資格。參展作品不得冒名、抄襲、複製他人之作品，亦不得以夫妻、子女、朋友或任何關係，將參展作品之著作權讓與、買賣以行冒名頂替參展之實，違者經查證屬實將依法除名，不予展覽。凡參賽即視同認可並接受本簡章之各項規定。</p>
 						<p>參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉為保護您的個人資料，依據個人資料保護法規定，於提供良好服務及執行職務或業務之必要範圍內蒐集、處理及利用您的個人資料。您同意本會以您所提供的個人資料確認您的身份、與您進行連絡、於展覽現場標誌，以及其他隱私權保護政策規範之使用方式。非在您同意下，本會不會將您的資料提供於本會外使用，您對於本會保有您的個人資料部分，日後仍得享有下列權利：一、得向本會查詢、請求閱覽、請求製給複製本。而本會依法得酌收必要成本費用。二、得向本會請求補充或更正。惟依法您應為適當之釋明。三、得向本會請求停止蒐集、處理或利用及請求刪除您的個人資料。</p>
 						<form id="confirm-form" action="upload.php" method="POST">
-							<div class="g-recaptcha" data-sitekey="6LdRg_8SAAAAAGwlJK0s4BOLY8BupKoBcRGJyprD"></div>
+							<div class="g-recaptcha" data-sitekey="6LdRg_8SAAAAAGwlJK0s4BOLY8BupKoBcRGJyprD" data-callback="confirmed_OK"></div>
 						</form>
 					</div>
 				</div>
@@ -355,7 +355,7 @@
 		<!-- complete model -->
 		<div id="complete" class="ui basic modal">
 			<i class="close icon"></i>
-			<div class="header">
+			<div id="complete-header" class="header">
 				結果...
 			</div>
 			<div class="content">

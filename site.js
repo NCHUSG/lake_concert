@@ -121,6 +121,9 @@ jQuery(function(){
                     $("#confirm-des").text(confirm.des);
                     $("#confirm-img").attr("src",confirm.img);
                     $("#confirm-name").text(confirm.name + " 同學");
+                    $("#confirmed").addClass("disabled");
+                    $("input[name=g-recaptcha-response]").prop("value","");
+                    grecaptcha.reset();
                     $('#submit-confirm').modal({onApprove:confirm_send}).modal('show');
                 }
             },
@@ -155,6 +158,7 @@ jQuery(function(){
                     else{
                         result = alert_message.post_error + res.result;
                     }
+                    $("#complete-header").text("投搞失敗!");
                 }
                 else{
                     result = alert_message.post_success;
@@ -162,16 +166,18 @@ jQuery(function(){
                         $('input#uploader').prop("value","");
                         $("input[name=des]").prop("value","");
                         $("input[name=img]").prop("value","");
-                        $("input[name=g-recaptcha-response]").prop("value","");
                         $("#shown-has-img").slideUp();
-                        grecaptcha.reset();
                     },900);
+                    $("#complete-header").text("投搞成功!");
                 }
+
+
                 $("#result").text(result);
             },
             error:function(xhr,e){
                 debug = e;
                 $("#result").text(alert_message.post_error + e);
+                $("#complete-header").text("連線失敗!");
             },
             complete:function(){
                 setTimeout(function(){
@@ -183,3 +189,8 @@ jQuery(function(){
         });
     }
 });
+
+function confirmed_OK(){
+    $("#confirmed").removeClass("disabled");
+}
+
