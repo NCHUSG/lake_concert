@@ -1,48 +1,10 @@
-var debug;
 jQuery(function(){
-		var alert_message = {
-			not_image: "您上傳的內容不是圖片，請修正",
-			imgur_error: "圖片上傳出現問題，請稍後嘗試或更換圖片",
-			post_error: "投稿內容受理失敗，錯誤內容如下\n",
-			post_success: "投稿已受理，您仍可繼續投稿其他內容"
-		};
-    // filter bg transition
-    var refresh_inteval = false;
-    var filter_frame_ori_class = $("#filter").attr("class");
-    function change_bg(){
-        if($(document).scrollTop() > $("#menu-enabler").position().top + 280)
-            $("#menuable").addClass("menued");
-        else
-            $("#menuable").removeClass("menued");
-
-        if(!refresh_inteval){
-            // console.log("change triggered!");
-            if($(document).scrollTop() > $('#vender').position().top - $(window).height()/2)
-                $("#filter").attr("class",filter_frame_ori_class + ' vender');
-            else if($(document).scrollTop() > $('#concert').position().top - $(window).height()/2)
-                $("#filter").attr("class",filter_frame_ori_class + ' concert');
-            else if($(document).scrollTop() > $('#recruit').position().top - $(window).height()/2)
-                $("#filter").attr("class",filter_frame_ori_class + ' recruit');
-            else if($(document).scrollTop() > $('#des').position().top - $(window).height()/2)
-                $("#filter").attr("class",filter_frame_ori_class + ' des');
-            else
-                $("#filter").attr("class",filter_frame_ori_class);
-            
-            refresh_inteval = true;
-            setTimeout(function(){
-                refresh_inteval = false;
-            },75);
-        }
-    }
-    $(window).scroll(change_bg);
-    change_bg();
-
-    // goto
-    $("#index .goto").click(function(){
-        $('body').scrollTo( $($(this).attr("href")), 800 );
-    }).popup({
-        position:'bottom center'
-    });
+    var alert_message = {
+        not_image: "您上傳的內容不是圖片，請修正",
+        imgur_error: "圖片上傳出現問題，請稍後嘗試或更換圖片",
+        post_error: "投稿內容受理失敗，錯誤內容如下\n",
+        post_success: "投稿已受理，您仍可繼續投稿其他內容"
+    };
 
     // uploader
     function upload(file) { // Copied from https://github.com/paulrouget/miniuploader
@@ -73,7 +35,7 @@ jQuery(function(){
         // Get your own key http://api.imgur.com/
         xhr.send(fd);
     }
-    
+
     window.ondragover = function(e) { e.preventDefault(); };
     window.ondrop = function(e) { e.preventDefault(); upload(e.dataTransfer.files[0]); };
     $("#uploader").change(function(){
@@ -193,4 +155,3 @@ jQuery(function(){
 function confirmed_OK(){
     $("#confirmed").removeClass("disabled");
 }
-
