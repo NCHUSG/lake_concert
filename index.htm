@@ -26,7 +26,7 @@
 		<meta name="twitter:image" content="http://i.imgur.com/zF2JgJ7.jpg" />
 
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">
-		<link rel="stylesheet" href="site.css">
+		<link rel="stylesheet" href="site.css?4">
 	</head>
 	<body>
 		<div id="bg" class="background frame">
@@ -52,29 +52,29 @@
 								<img href="#index" class="ui index centerized goto image" src="img/icon.png" alt="" data-html="回到最上方">
 							</div>
 							<div class="column">
-								<h2 href="#recruit" class="ui recruit icon centerized goto header" data-html="歡迎大家在這個地方，寫下你和朋友們曾經發生過的感動、愉快，不論是丟湖、綁樹、刮鬍泡的好笑畫面；還是和朋友夜衝、夜唱、煮火鍋的有趣回憶；或者是系隊、盃賽、主任盃的開心淚水，寫下來，讓大家一同參與。">
+								<h2 href="#recruit" class="ui recruit icon centerized goto header" data-html="我們都有的歡笑淚水">
 									<i class="photo icon"></i>
 									<div class="content">
 										大學回憶
-									<div class="sub header">我們需要！你的故事！</div>
+									<div class="sub header visible having sm">年輕人的歌，唱給年輕人聽。</div>
 									</div>
 								</h2>
 							</div>
 							<div class="column">
-								<h2 href="#concert" class="ui concert icon centerized goto header" data-html="敬請期待！">
+								<h2 href="#concert" class="ui concert icon centerized goto header" data-html="盡情搖擺吧">
 									<i class="music icon"></i>
 									<div class="content">
 										音樂季
-									<div class="sub header">演出時間表</div>
+									<div class="sub header visible having sm">演出時間表</div>
 									</div>
 								</h2>
 							</div>
 							<div class="column">
-								<h2 href="#vender" class="ui vender icon centerized goto header" data-html="敬請期待！">
+								<h2 href="#vender" class="ui vender icon centerized goto header" data-html="手作vs美食，難以抗拒">
 									<i class="tree icon"></i>
 									<div class="content">
 										湖畔小攤
-									<div class="sub header">來看看有啥小東西</div>
+									<div class="sub header visible having sm">來看看有啥小東西</div>
 									</div>
 								</h2>
 							</div>
@@ -96,7 +96,12 @@
 					</div>
 					<div class="four wide column"></div>
 				</div>
-				<div class="long stripe"></div>
+                <div id="picture_txt" class="ui page one column grid"><div class="column">
+                        <h3 class="ui right aligned header">搞笑、有趣、荒謬、溫馨、感人</h3>
+                        <h3 class="ui right aligned header">每一個捧腹大笑會心一笑哈哈大笑</h3>
+                        <h3 class="ui right aligned header">就在這裡！貼圖作家的小天地～</h3>
+                </div></div>
+                <div id="picture" class="ui page stackable three column grid"></div>
 
 			</div>
 			<div id="recruit" class="masthead recruit viewport-height stripe">
@@ -132,27 +137,27 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="center aligned">18:00-18:40 <a class="slide_ctl" href="#ccc">Crispy 脆樂團</a></td>
+										<td class="center aligned"></td>
 										<td class="center aligned">17:30-17:50 <a class="slide_ctl" href="#response">海螺的回應</a></td>
 									</tr>
 									<tr>
-										<td class="center aligned">18:45-19:05 吉他社</td>
+										<td class="center aligned">18:00-18:40 <a class="slide_ctl" href="#ccc">Crispy 脆樂團</a></td>
 										<td class="center aligned">18:00-18:20 口琴社</td>
 									</tr>
 									<tr>
-										<td class="center aligned">19:10-19:30 弦樂社</td>
+										<td class="center aligned">18:45-19:05 吉他社</td>
 										<td class="center aligned">18:25-18:45 爵士音樂社</td>
 									</tr>
 									<tr>
-										<td class="center aligned">19:40-20:20 <a class="slide_ctl" href="#wang">王彙筑</a></th>
+										<td class="center aligned">19:10-19:30 弦樂社</th>
 										<td class="center aligned">18:50-19:30 <a class="slide_ctl" href="#chiu">邱振哲</a></td>
 									</tr>
 									<tr>
-										<td class="center aligned">20:30-21:10 <a class="slide_ctl" href="#huang">黃玠</a></td>
+										<td class="center aligned">19:40-20:20 <a class="slide_ctl" href="#wang">王彙筑</a></td>
 										<td class="center aligned">19:40-20:20 <a class="slide_ctl" href="#annisings">洪安妮</a></td>
 									</tr>
 									<tr>
-										<td class="center aligned"></td>
+										<td class="center aligned">20:30-21:10 <a class="slide_ctl" href="#huang">黃玠</a></td>
 										<td class="center aligned">20:30-21:10 <a class="slide_ctl" href="#baba">來吧！焙焙</a></td>
 									</tr>
 								</tbody>
@@ -183,19 +188,14 @@
 					</div>
 				</h2>
 				<div class="ui page one column grid">
-					<div class="column"><h4>會來與大家相見的攤販們</h4></div>
+					<div class="column"></div>
 				</div>
-				<div class="ui page one column grid">
+				<div class="ui page stackable two column grid">
 					<div id="vender_list" class="column">
-						<div class="ui list">
-						  <div class="item">
-						    <img class="ui avatar image" src="http://i.imgur.com/kZyWfaz.png">
-						    <div class="content">
-						      <a class="header">Daniel Louise</a>
-						      <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
-						    </div>
-							</div>
-						</div>
+                        <h4>會來與大家相見的攤販們</h4>
+					</div>
+					<div id="eating_list" class="column">
+                        <h4>吃吃喝喝</h4>
 					</div>
 				</div>
 			</div>
@@ -212,9 +212,9 @@
 							nchusg20@gmail.com
 							<div class="detail">使用 Email 聯絡我們</div>
 						</a>
-						<a href="tel:0422873181" class="ui us image blue label">
+						<a href="tel:0422840245" class="ui us image blue label">
 							<i class="call icon"></i>
-							2284-0245
+							(04)2284-0245
 							<div class="detail">使用電話聯絡我們</div>
 						</a>
 					</div>
@@ -292,7 +292,7 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.11/jquery.scrollTo.min.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script src='js/jt2html.min.js'></script>
-		<script src='js/site.js'></script>
+		<script src='js/site.js?11'></script>
 
 		<!-- google analytics -->
 		<script>

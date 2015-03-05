@@ -293,8 +293,11 @@ div.ui.transparent.underlined.input{
 }
 
 /* concert */
-div#time-table{
-    width: 61%;
+
+@media (min-width: 700px){
+    div#time-table{
+        width: 61%;
+    }
 }
 div#time-table table{
     background-color: rgba(59, 55, 90, 0.4) !important;
@@ -313,3 +316,14 @@ div#time-table table td,div#time-table table th{
 .slide_ctl{
     color:rgb(216, 107, 0);
 }
+
+#picture_txt h3,#picture h3{
+    color:rgb(73, 116, 39) !important;
+}
+
+@media (max-width: 700px){
+    .ui.icon.header .content{
+        font-size:17px;
+    }
+}
+
