@@ -294,7 +294,7 @@ div.ui.transparent.underlined.input{
 
 /* concert */
 
-@media (min-width: 700px){
+@media (min-width: 1050px){
     div#time-table{
         width: 61%;
     }

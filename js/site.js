@@ -49,7 +49,7 @@ jQuery(function(){
 
 	JT2html({
 		body:'@{}',
-		"":'<div class="column"><div id="confirm" class="ui inverted cus-orange raised segment"><img class="ui bordered centered image" src="@{img}"><div class="ui pointing centerized teal label">@{text}</div></div></div>'
+		"":'<div class="column"><div id="confirm" class="ui inverted cus-orange raised segment"><img class="ui bordered centered image" src="@{img}"><div class="ui pointing centerized teal big label">@{text}</div></div></div>'
 	}).fromGS('https://spreadsheets.google.com/feeds/list/14OZEhnyAUUZgmV090p38_uTO-hEdAfn_WzSBT27t40A/2/public/values?alt=json',function(html){
 		jQuery("#memories").empty().append(html);
 	});
