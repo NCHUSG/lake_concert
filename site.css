@@ -309,3 +309,7 @@ div#time-table table td,div#time-table table th{
     height: 200px;
     width: auto !important;
 }
+
+.slide_ctl{
+    color:rgb(216, 107, 0);
+}

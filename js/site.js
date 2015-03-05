@@ -45,6 +45,17 @@ jQuery(function(){
 		jQuery("#memories").empty().append(html);
 	});
 
+    function slide_show(hash){
+        var target = jQuery(hash);
+        if(target.length){
+            jQuery(".performer_card.hidable").addClass('hidden');
+            jQuery(hash).removeClass('hidden');
+        }
+        else{
+            return false;
+        }
+    }
+
 	jQuery.get('https://spreadsheets.google.com/feeds/list/14OZEhnyAUUZgmV090p38_uTO-hEdAfn_WzSBT27t40A/2/public/values?alt=json',function(data){
 		var slides_ctl = JT2html({
 			body:"@{}",
@@ -62,12 +73,11 @@ jQuery(function(){
 		ctl.empty().append(slides_ctl);
 
 		if(window.location.hash)
-			jQuery(window.location.hash).removeClass('hidden');
+            slide_show(window.location.hash)
 		else
 			jQuery(".performer_card.hidable.hidden").eq(0).removeClass('hidden');
-		jQuery(".slide_ctl").click(function(){
-			jQuery(".performer_card.hidable").addClass('hidden');
-			jQuery(jQuery(this).attr('href')).removeClass('hidden');
+		jQuery(".slide_ctl").click(function(e){
+            slide_show(jQuery(this).attr('href'));
 		})
 	});
 
