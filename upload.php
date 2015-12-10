@@ -5,7 +5,7 @@ include("setting.php");
 $response = array();
 $error = array();
 try {
-    if(time() > strtotime("2015-03-04")) //開始徵文的時間判斷
+    if(time() > strtotime("2016-03-04")) //開始徵文的時間判斷
         throw new Exception("徵文已經結束！感謝大家的支持！");
     
     if(!$_POST['name'])
