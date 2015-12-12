@@ -27,7 +27,7 @@
 		<meta name="twitter:image" content="http://i.imgur.com/zF2JgJ7.jpg" />
 
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">
-		<link rel="stylesheet" href="site.css?6">
+		<link rel="stylesheet" href="site.css?6">		
 	</head>
 	<body>
 		<div id="bg" class="background frame">
@@ -219,6 +219,71 @@
 				-->
 				</div>
 			</div>
+			<!--使用者徵文提交區-->
+			<div class="ui container" style="padding: 0 150px;">
+				<div class="ui form">
+				  <div class="two fields">
+				    <div class="field" >
+				      <label>NAME</label>
+				      <input placeholder="請填入姓名" type="text" id="name">
+				    </div>
+				    <div class="field">
+				      <label>null</label>
+				      <input placeholder="Last Name" type="text" id="">
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>學制</label>
+				    <div class="ui selection dropdown" id='v_degree'>
+				      <div class="default text">請選擇學制</div>
+				      <i class="dropdown icon"></i>
+				      <input name="gender" type="hidden">
+				      <div class="menu">
+				       	<div class="item" data-value="請選擇學制">請選擇學制</div>
+				       	<div class="item" data-value="學士班">學士班</div>
+				       	<div class="item" data-value="碩士班">碩士班</div>
+				       	<div class="item" data-value="博士班">博士班</div>
+				       	<div class="item" data-value="產專班">產專班</div>
+				       	<div class="item" data-value="碩專班">碩專班</div>
+				       	<div class="item" data-value="進修學士班">進修學士班</div>
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>系所</label>
+				    <div class="ui selection dropdown" id='v_major'>
+				      <div class="default text">請選擇系所</div>
+				      <i class="dropdown icon"></i>
+				      <input name="gender" type="hidden">
+				      <div class="menu">
+				      	
+				      </div>
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>年級</label>
+				    <div class="ui selection dropdown" id='v_level'>
+				      <div class="default text">請選擇年級</div>
+				      <i class="dropdown icon"></i>
+				      <input name="gender" type="hidden">
+				      <div class="menu">
+				      	<div class="item" data-value="請選擇年級">請選擇年級</div>
+				      </div>	       	
+				    </div>
+				  </div>
+				  <div class="inline field">
+				    <div class="ui checkbox">
+				      <input class="hidden" tabindex="0" type="checkbox">
+				      <label>I agree to the Terms and Conditions</label>
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>submit your article here</label>
+				    <textarea id="text-submit"></textarea>
+				  </div>
+				  <button class="ui red button" id="submit">Submit</button>			  
+				</div>
+			</div>
+
 			<div id="footer" class="masthead footer stripe">
 				<div class="ui page one column grid">
 					<div id="sponsers" class="centerAligned column">
@@ -313,7 +378,7 @@
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script src='js/jt2html.min.js'></script>
 		<script src='js/site.js?13'></script>
-
+		<script src='js/submit_article_by semantic.js'></script>
 		<!-- google analytics -->
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

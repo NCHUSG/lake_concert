@@ -111,5 +111,5 @@ jQuery(function(){
 	}).fromGS('https://spreadsheets.google.com/feeds/list/14OZEhnyAUUZgmV090p38_uTO-hEdAfn_WzSBT27t40A/6/public/values?alt=json',function(html){
 		jQuery("#sponsers").append(html);
 	});
-
+	
 });
