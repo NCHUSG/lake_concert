@@ -57,25 +57,15 @@ $(document).ready(function() {
 	        	var default_value = $("#v_level .menu > .item:first-child").html();	 
 	        	$("#v_level").dropdown('refresh').dropdown('set value', default_value).dropdown('show');
 	        })
-	    })	
-			
-		// $("#v_major").change(function(){
-		// 	var default_value_level = $("#v_level .menu > .item:first-child").html();
-		// 	$("#v_level").dropdown('refresh').dropdown('set value', default_value_level).dropdown('show');
-		// })
+	    })						
+		$('.message .close')
+		  .on('click', function() {
+		    $(this)
+		      .closest('.message')
+		      .transition('fade')
+		    ;
+		  })
+		;
 	    $('.ui.checkbox').checkbox();
-	})  
-	$('#submit').click(function(){
-		var name = $('#name').val();
-		var degree = $('#v_degree').dropdown('get value');
-		var major = $('#v_major').dropdown('get value');
-		var level = $('#v_level').dropdown('get value');
-		var context = $('#text-submit').val();
-		console.log(name)
-		console.log(degree)
-		console.log(major)
-		console.log(level)
-		console.log(context)
-	})	            	                	
+	})  	         	                
 });
-	
