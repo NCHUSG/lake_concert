@@ -97,6 +97,93 @@
 					</div>
 					<div class="four wide column"></div>
 				</div>
+				
+			<!--使用者徵文提交區-->
+			<div class="ui container" style="padding: 0 150px;">
+				
+				<div class="ui grid">
+				    <div class="row">
+				        <div class="column">
+				            <div class="ui huge message page grid center aligned">
+				                <h1 class="ui huge header">【主題：校園小角落】</h1>
+				                <p>
+				               無論是在湖畔突然捕捉到的那一幕美好
+							   或是關於小角落的傳奇故事
+							   又可能是和同學們在體育館的熱血回憶
+							   從學餐到綜大，圖書館到中興湖
+							   每個地方都是我們共同的秘密基地
+							   現在就拿起相機和筆記錄一切吧
+							   希望你們能和我們分享校園美麗的一隅
+								</p>				                
+				            </div>
+				        </div>
+				    </div>
+				</div>
+
+				<div class="ui form">
+				  <div class="two fields">
+				    <div class="field" >
+				      <label>NAME</label>
+				      <input placeholder="請填入姓名" type="text" id="name">
+				    </div>
+				    <div class="field">
+				      <label>null</label>
+				      <input placeholder="Last Name" type="text" id="">
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>學制</label>
+				    <div class="ui selection dropdown" id='v_degree'>
+				      <div class="default text">請選擇學制</div>
+				      <i class="dropdown icon"></i>
+				      <input name="gender" type="hidden">
+				      <div class="menu">
+				       	<div class="item" data-value="請選擇學制">請選擇學制</div>
+				       	<div class="item" data-value="學士班">學士班</div>
+				       	<div class="item" data-value="碩士班">碩士班</div>
+				       	<div class="item" data-value="博士班">博士班</div>
+				       	<div class="item" data-value="產專班">產專班</div>
+				       	<div class="item" data-value="碩專班">碩專班</div>
+				       	<div class="item" data-value="進修學士班">進修學士班</div>
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>系所</label>
+				    <div class="ui selection dropdown" id='v_major'>
+				      <div class="default text">請選擇系所</div>
+				      <i class="dropdown icon"></i>
+				      <input name="gender" type="hidden">
+				      <div class="menu">
+				      	
+				      </div>
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>年級</label>
+				    <div class="ui selection dropdown" id='v_level'>
+				      <div class="default text">請選擇年級</div>
+				      <i class="dropdown icon"></i>
+				      <input name="gender" type="hidden">
+				      <div class="menu">
+				      	<div class="item" data-value="請選擇年級">請選擇年級</div>
+				      </div>	       	
+				    </div>
+				  </div>
+				  <div class="inline field">
+				    <div class="ui checkbox">
+				      <input class="hidden" tabindex="0" type="checkbox">
+				      <label>I agree to the Terms and Conditions</label>
+				    </div>
+				  </div>
+				  <div class="field">
+				    <label>submit your article here</label>
+				    <textarea id="text-submit"></textarea>
+				  </div>
+				  <button class="ui red button" id="submit">Submit</button>			  
+				</div>
+			</div>			
+		</div>
+		
                 <div id="picture_txt" class="ui page one column grid"><div class="column">
                         <h3 class="ui right aligned header">搞笑、有趣、荒謬、溫馨、感人</h3>
                         <h3 class="ui right aligned header">每一個捧腹大笑會心一笑哈哈大笑</h3>
@@ -219,91 +306,7 @@
 				-->
 				</div>
 			</div>
-			<!--使用者徵文提交區-->
-			<div class="ui container" style="padding: 0 150px;">
-				
-				<div class="ui grid">
-				    <div class="row">
-				        <div class="column">
-				            <div class="ui huge message page grid center aligned">
-				                <h1 class="ui huge header">【主題：校園小角落】</h1>
-				                <p>
-				               無論是在湖畔突然捕捉到的那一幕美好
-							   或是關於小角落的傳奇故事
-							   又可能是和同學們在體育館的熱血回憶
-							   從學餐到綜大，圖書館到中興湖
-							   每個地方都是我們共同的秘密基地
-							   現在就拿起相機和筆記錄一切吧
-							   希望你們能和我們分享校園美麗的一隅
-								</p>				                
-				            </div>
-				        </div>
-				    </div>
-				</div>
-
-				<div class="ui form">
-				  <div class="two fields">
-				    <div class="field" >
-				      <label>NAME</label>
-				      <input placeholder="請填入姓名" type="text" id="name">
-				    </div>
-				    <div class="field">
-				      <label>null</label>
-				      <input placeholder="Last Name" type="text" id="">
-				    </div>
-				  </div>
-				  <div class="field">
-				    <label>學制</label>
-				    <div class="ui selection dropdown" id='v_degree'>
-				      <div class="default text">請選擇學制</div>
-				      <i class="dropdown icon"></i>
-				      <input name="gender" type="hidden">
-				      <div class="menu">
-				       	<div class="item" data-value="請選擇學制">請選擇學制</div>
-				       	<div class="item" data-value="學士班">學士班</div>
-				       	<div class="item" data-value="碩士班">碩士班</div>
-				       	<div class="item" data-value="博士班">博士班</div>
-				       	<div class="item" data-value="產專班">產專班</div>
-				       	<div class="item" data-value="碩專班">碩專班</div>
-				       	<div class="item" data-value="進修學士班">進修學士班</div>
-				    </div>
-				  </div>
-				  <div class="field">
-				    <label>系所</label>
-				    <div class="ui selection dropdown" id='v_major'>
-				      <div class="default text">請選擇系所</div>
-				      <i class="dropdown icon"></i>
-				      <input name="gender" type="hidden">
-				      <div class="menu">
-				      	
-				      </div>
-				    </div>
-				  </div>
-				  <div class="field">
-				    <label>年級</label>
-				    <div class="ui selection dropdown" id='v_level'>
-				      <div class="default text">請選擇年級</div>
-				      <i class="dropdown icon"></i>
-				      <input name="gender" type="hidden">
-				      <div class="menu">
-				      	<div class="item" data-value="請選擇年級">請選擇年級</div>
-				      </div>	       	
-				    </div>
-				  </div>
-				  <div class="inline field">
-				    <div class="ui checkbox">
-				      <input class="hidden" tabindex="0" type="checkbox">
-				      <label>I agree to the Terms and Conditions</label>
-				    </div>
-				  </div>
-				  <div class="field">
-				    <label>submit your article here</label>
-				    <textarea id="text-submit"></textarea>
-				  </div>
-				  <button class="ui red button" id="submit">Submit</button>			  
-				</div>
-			</div>			
-		</div>
+		
 		<div class="ui container">
 			<div id="footer" class="masthead footer stripe">
 				<div class="ui page one column grid">
