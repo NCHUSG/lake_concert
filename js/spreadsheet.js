@@ -23,22 +23,24 @@ $(document).ready(function() {
 			  department : major_v,
 			  level : level_v,
 			  article	 : context_v			
-		  };
+		  };	
 		  $.post(authors_info, formData, function(response) {
 			  var r = response			
 			  if(r["result"] == "success"){
 				  $('#submit').attr('class','ui primary button');
 				  $('#submit').text('Success');
-				  //toastr.warning("此為必修課，若要復原請點擊課表空格");     
+				  toastr.success("已成功提交囉~~<br /><br />感謝您的參與", {timeOut: 250000});     
 				  $('#name').val("");
 				  $('#phone').val("");					
   				  $('#v_degree').children('div:eq(0)').text("");
 	        	  $("#v_major").children('div:eq(0)').text("");
 				  $('#v_level').children('div:eq(0)').text("");
-				  $('#text-submit').val("");
-				  $('')
+				  $('#text-submit').val("");				  
 			  }
 		  });
+		}
+		else{
+			toastr.error("請同意條款喔~<br/>再提交喔~", {timeOut: 250000});     
 		}
 	})	   
 });
