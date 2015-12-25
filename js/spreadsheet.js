@@ -15,17 +15,19 @@ $(document).ready(function() {
 		  var degree_v = $('#v_degree').dropdown('get value');
 		  var major_v = $('#v_major').dropdown('get value');	
 		  var level_v = $('#v_level').dropdown('get value');
-		  var context_v = $('#text-submit').val();		 
+		  var context_v = $('#text-submit').val();	
+		  var photo_v = $('#photo').val();	 
 		  var formData = {
 			  name : name_v,
 			  phone : phone_v,
 			  degree : degree_v,
 			  department : major_v,
 			  level : level_v,
+			  photo : photo_v,
 			  article	 : context_v			
 		  };	
 		  $.post(authors_info, formData, function(response) {
-			  var r = response			
+			  var r = response;		
 			  if(r["result"] == "success"){
 				  $('#submit').attr('class','ui primary button');
 				  $('#submit').text('Success');
@@ -35,7 +37,8 @@ $(document).ready(function() {
   				  $('#v_degree').children('div:eq(0)').text("");
 	        	  $("#v_major").children('div:eq(0)').text("");
 				  $('#v_level').children('div:eq(0)').text("");
-				  $('#text-submit').val("");				  
+				  $('#text-submit').val("");	
+				  $('#photo').val("");			  
 			  }
 		  });
 		}
