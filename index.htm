@@ -100,102 +100,106 @@
 				</div>
 				
 			<!--使用者徵文提交區-->
-			<div class="ui container" style="padding: 0 150px;">
-				
-				<div class="ui grid">
+			<div class="ui container">
+				<div class="ui grid stackable">
 				    <div class="row">
-				        <div class="column">
+				    		<div class="ui two wide column"></div>
+
+				        <div class="ui twelve wide column">
 				            <div class="ui huge message page grid center aligned">
 				                <h1 class="ui huge header">【主題：校園小角落】</h1>
 				                <p>
 				               無論是在湖畔突然捕捉到的那一幕美好
-							   或是關於小角落的傳奇故事
-							   又可能是和同學們在體育館的熱血回憶
-							   從學餐到綜大，圖書館到中興湖
-							   每個地方都是我們共同的秘密基地
-							   現在就拿起相機和筆記錄一切吧
-							   希望你們能和我們分享校園美麗的一隅
-								</p>				                
+											   或是關於小角落的傳奇故事
+											   又可能是和同學們在體育館的熱血回憶
+											   從學餐到綜大，圖書館到中興湖
+											   每個地方都是我們共同的秘密基地
+											   現在就拿起相機和筆記錄一切吧
+											   希望你們能和我們分享校園美麗的一隅
+												</p>				                
 				            </div>
+			            	<div class="ui form">
+			            		<div class="two fields">
+			            			<div class="field" >
+			            				<label>Name</label>
+			            				<input placeholder="請填入姓名" type="text" id="name">
+			            			</div>
+			            			<div class="field">
+			            				<label>Phone</label>
+			            				<input placeholder="Please input your phone number" type="text" id="phone">
+			            			</div>
+			            		</div>
+			            		<div class="field">
+			            			<label>學制</label>
+			            			<div class="ui selection dropdown" id='v_degree'>
+			            				<div class="default text">請選擇學制</div>
+			            				<i class="dropdown icon"></i>
+			            				<input name="gender" type="hidden">
+			            				<div class="menu">
+			            					<div class="item" data-value="請選擇學制">請選擇學制</div>
+			            					<div class="item" data-value="學士班">學士班</div>
+			            					<div class="item" data-value="碩士班">碩士班</div>
+			            					<div class="item" data-value="博士班">博士班</div>
+			            					<div class="item" data-value="產專班">產專班</div>
+			            					<div class="item" data-value="碩專班">碩專班</div>
+			            					<div class="item" data-value="進修學士班">進修學士班</div>
+			            				</div>
+			            			</div>
+			            			<div class="field">
+			            				<label>系所</label>
+			            				<div class="ui selection dropdown" id='v_major'>
+			            					<div class="default text">請選擇系所</div>
+			            					<i class="dropdown icon"></i>
+			            					<input name="gender" type="hidden">
+			            					<div class="menu">
+
+			            					</div>
+			            				</div>
+			            			</div>
+			            			<div class="field">
+			            				<label>年級</label>
+			            				<div class="ui selection dropdown" id='v_level'>
+			            					<div class="default text">請選擇年級</div>
+			            					<i class="dropdown icon"></i>
+			            					<input name="gender" type="hidden">
+			            					<div class="menu">
+			            						<div class="item" data-value="請選擇年級">請選擇年級</div>
+			            					</div>	       	
+			            				</div>
+			            			</div>
+			            			<div class="ui positive message">
+			            				<i class="close icon"></i>
+			            				<div class="header">
+			            					麻煩確認並同意以下事項
+			            				</div>
+			            				<p>所有參與徵稿之作品及原稿數位檔案之著作財產權歸原著所有，唯參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉於活動中無償使用作品。本會擁有素材或影片創意重製、公開展示之權利，均不另予通知及致酬。經公布獲展之作品，著作人不得要求取消獲展資格。參展作品不得冒名、抄襲、複製他人之作品，亦不得以夫妻、子女、朋友或任何關係，將參展作品之著作權讓與、買賣以行冒名頂替參展之實，違者經查證屬實將依法除名，不予展覽。凡參賽即視同認可並接受本簡章之各項規定。</p>
+			            				<p>參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉為保護您的個人資料，依據個人資料保護法規定，於提供良好服務及執行職務或業務之必要範圍內蒐集、處理及利用您的個人資料。您同意本會以您所提供的個人資料確認您的身份、與您進行連絡、於展覽現場標誌，以及其他隱私權保護政策規範之使用方式。非在您同意下，本會不會將您的資料提供於本會外使用，您對於本會保有您的個人資料部分，日後仍得享有下列權利：一、得向本會查詢、請求閱覽、請求製給複製本。而本會依法得酌收必要成本費用。二、得向本會請求補充或更正。惟依法您應為適當之釋明。三、得向本會請求停止蒐集、處理或利用及請求刪除您的個人資料。</p>
+			            			</div>
+			            			<div class="inline field">
+			            				<div class="ui checkbox">
+			            					<input class="hidden" tabindex="0" type="checkbox" id="checked">
+			            					<label>I agree to the Terms and Conditions</label>
+			            				</div>
+			            			</div>
+			            			<div class="field">
+			            				<label>圖片連結</label>
+			            				<input placeholder="Please place your link into this blank" type="text" id="photo">
+			            			</div>
+			            			<div class="field">
+			            				<label>徵文</label>
+			            				<textarea id="text-submit"></textarea>
+			            			</div>
+			            			<button class="ui red button" id="submit">Submit</button>			  
+			            		</div>
+			            	</div>			
+			            </div>
+
 				        </div>
+				    		<div class="ui two wide column"></div>
 				    </div>
 				</div>
 
-				<div class="ui form">
-				  <div class="two fields">
-				    <div class="field" >
-				      <label>Name</label>
-				      <input placeholder="請填入姓名" type="text" id="name">
-				    </div>
-				    <div class="field">
-				      <label>Phone</label>
-				      <input placeholder="Please input your phone number" type="text" id="phone">
-				    </div>
-				  </div>
-				  <div class="field">
-				    <label>學制</label>
-				    <div class="ui selection dropdown" id='v_degree'>
-				      <div class="default text">請選擇學制</div>
-				      <i class="dropdown icon"></i>
-				      <input name="gender" type="hidden">
-				      <div class="menu">
-				       	<div class="item" data-value="請選擇學制">請選擇學制</div>
-				       	<div class="item" data-value="學士班">學士班</div>
-				       	<div class="item" data-value="碩士班">碩士班</div>
-				       	<div class="item" data-value="博士班">博士班</div>
-				       	<div class="item" data-value="產專班">產專班</div>
-				       	<div class="item" data-value="碩專班">碩專班</div>
-				       	<div class="item" data-value="進修學士班">進修學士班</div>
-				    </div>
-				  </div>
-				  <div class="field">
-				    <label>系所</label>
-				    <div class="ui selection dropdown" id='v_major'>
-				      <div class="default text">請選擇系所</div>
-				      <i class="dropdown icon"></i>
-				      <input name="gender" type="hidden">
-				      <div class="menu">
-				      	
-				      </div>
-				    </div>
-				  </div>
-				  <div class="field">
-				    <label>年級</label>
-				    <div class="ui selection dropdown" id='v_level'>
-				      <div class="default text">請選擇年級</div>
-				      <i class="dropdown icon"></i>
-				      <input name="gender" type="hidden">
-				      <div class="menu">
-				      	<div class="item" data-value="請選擇年級">請選擇年級</div>
-				      </div>	       	
-				    </div>
-				  </div>
-				  <div class="ui positive message">
-				    <i class="close icon"></i>
-				    <div class="header">
-				      麻煩確認並同意以下事項
-				    </div>
-				    <p>所有參與徵稿之作品及原稿數位檔案之著作財產權歸原著所有，唯參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉於活動中無償使用作品。本會擁有素材或影片創意重製、公開展示之權利，均不另予通知及致酬。經公布獲展之作品，著作人不得要求取消獲展資格。參展作品不得冒名、抄襲、複製他人之作品，亦不得以夫妻、子女、朋友或任何關係，將參展作品之著作權讓與、買賣以行冒名頂替參展之實，違者經查證屬實將依法除名，不予展覽。凡參賽即視同認可並接受本簡章之各項規定。</p>
-						<p>參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉為保護您的個人資料，依據個人資料保護法規定，於提供良好服務及執行職務或業務之必要範圍內蒐集、處理及利用您的個人資料。您同意本會以您所提供的個人資料確認您的身份、與您進行連絡、於展覽現場標誌，以及其他隱私權保護政策規範之使用方式。非在您同意下，本會不會將您的資料提供於本會外使用，您對於本會保有您的個人資料部分，日後仍得享有下列權利：一、得向本會查詢、請求閱覽、請求製給複製本。而本會依法得酌收必要成本費用。二、得向本會請求補充或更正。惟依法您應為適當之釋明。三、得向本會請求停止蒐集、處理或利用及請求刪除您的個人資料。</p>
-				  </div>
-				  <div class="inline field">
-				    <div class="ui checkbox">
-				      <input class="hidden" tabindex="0" type="checkbox" id="checked">
-				      <label>I agree to the Terms and Conditions</label>
-				    </div>
-				  </div>
-				  <div class="field">
-				      <label>圖片連結</label>
-				      <input placeholder="Please place your link into this blank" type="text" id="photo">
-				    </div>
-				  <div class="field">
-				    <label>徵文</label>
-				    <textarea id="text-submit"></textarea>
-				  </div>
-				  <button class="ui red button" id="submit">Submit</button>			  
-				</div>
-			</div>			
-		</div>
+
 		
                 <div id="picture_txt" class="ui page one column grid"><div class="column">
                         <h3 class="ui right aligned header">搞笑、有趣、荒謬、溫馨、感人</h3>
