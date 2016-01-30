@@ -1,258 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="img/logo.png" />
-		<title>興大湖畔音樂季</title>
 
-		<!-- for Google -->
-		<meta name="description" content="興大湖畔音樂季" />
-		<meta name="keywords" content="中興大學 湖畔 音樂季" />
-
-		<meta name="author" content="中興大學學生會 NCHUSG" />
-		<meta name="copyright" content="中興大學學生會 NCHUSG" />
-		<meta name="application-name" content="興大湖畔音樂季官網" />
-
-		<!-- for Facebook -->
-		<meta property="og:title" content="興大湖畔音樂季" />
-		<meta property="og:type" content="official" />
-		<meta property="og:image" content="http://i.imgur.com/zF2JgJ7.jpg" />
-		<meta property="og:url" content="http://lake.nchusg.org" />
-		<meta property="og:description" content="十八歲，你還怎麼青澀；貳拾貳，你又怎麼成熟 在無數次邁向下一個階段，我們留下的腳印或回憶，仍光輝閃爍 只是隨著太陽月亮，它們總會黯淡… 或者我們收集起來，並寫下每一秒鐘的故事 告訴所有人：我們曾經勇敢，曾經美麗；我們走過悲傷，也擁抱過笑容 讓青春回憶如繁星，永恆" />
-
-		<!-- for Twitter -->
-		<meta name="twitter:title" content="興大湖畔音樂季" />
-		<meta name="twitter:description" content="十八歲，你還怎麼青澀；貳拾貳，你又怎麼成熟 在無數次邁向下一個階段，我們留下的腳印或回憶，仍光輝閃爍 只是隨著太陽月亮，它們總會黯淡… 或者我們收集起來，並寫下每一秒鐘的故事 告訴所有人：我們曾經勇敢，曾經美麗；我們走過悲傷，也擁抱過笑容 讓青春回憶如繁星，永恆" />
-		<meta name="twitter:image" content="http://i.imgur.com/zF2JgJ7.jpg" />
-
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">
-		<link rel="stylesheet" href="site.css?6">	
-		<link href="toastr/toastr.css" rel="stylesheet"/><!--這是toast message的css-->			
-	</head>
-	<body>
-		<div id="bg" class="background frame">
-			<div class="bg-top"></div>
-			<div class="bg-bot"></div>
-		</div>
-		<div id="filter" class="filter frame"></div>
-		<div class="frame curtain">
-			<div id="index" class="masthead index viewport-height stripe">
-				<div class="visible on lg long stripe"></div>
-				<div class="visible on md short stripe"></div>
-				<div class="ui middle aligned page stackable grid">
-					<div class="six wide column">
-						<img class="ui centerized image" src="img/icon.png" alt="">
-					</div>
-					<div class="ten wide column">
-						<!-- <img class="ui image" src="title.png"> -->
-						<h1 class="ui center aligned massive header">興大湖畔音樂季</h1>
-						<div class="ui center aligned header">2016 3/5 ~ 13 的夜晚星空，讓我們在圖書館前廣場，享受湖畔，享受音樂</div>
-						<div id="menu-enabler" class="short stripe"></div>
-						<div id="menuable" class="ui four column centered grid">
-							<div id="to-top" class="column">
-								<img href="#index" class="ui index centerized goto image" src="img/icon.png" alt="" data-html="回到最上方">
-							</div>
-							<div class="column">
-								<h2 href="#recruit" class="ui recruit icon centerized goto header" data-html="我們都有的歡笑淚水">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/logo.png" />
+    <title>興大湖畔音樂季</title>
+    <!-- for Google -->
+    <meta name="description" content="興大湖畔音樂季" />
+    <meta name="keywords" content="中興大學 湖畔 音樂季" />
+    <meta name="author" content="中興大學學生會 NCHUSG" />
+    <meta name="copyright" content="中興大學學生會 NCHUSG" />
+    <meta name="application-name" content="興大湖畔音樂季官網" />
+    <!-- for Facebook -->
+    <meta property="og:title" content="興大湖畔音樂季" />
+    <meta property="og:type" content="official" />
+    <meta property="og:image" content="http://i.imgur.com/zF2JgJ7.jpg" />
+    <meta property="og:url" content="http://lake.nchusg.org" />
+    <meta property="og:description" content="十八歲，你還怎麼青澀；貳拾貳，你又怎麼成熟 在無數次邁向下一個階段，我們留下的腳印或回憶，仍光輝閃爍 只是隨著太陽月亮，它們總會黯淡… 或者我們收集起來，並寫下每一秒鐘的故事 告訴所有人：我們曾經勇敢，曾經美麗；我們走過悲傷，也擁抱過笑容 讓青春回憶如繁星，永恆" />
+    <!-- for Twitter -->
+    <meta name="twitter:title" content="興大湖畔音樂季" />
+    <meta name="twitter:description" content="十八歲，你還怎麼青澀；貳拾貳，你又怎麼成熟 在無數次邁向下一個階段，我們留下的腳印或回憶，仍光輝閃爍 只是隨著太陽月亮，它們總會黯淡… 或者我們收集起來，並寫下每一秒鐘的故事 告訴所有人：我們曾經勇敢，曾經美麗；我們走過悲傷，也擁抱過笑容 讓青春回憶如繁星，永恆" />
+    <meta name="twitter:image" content="http://i.imgur.com/zF2JgJ7.jpg" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">
+    <link rel="stylesheet" href="site.css?6">
+    <link href="toastr/toastr.css" rel="stylesheet" />
+    <!--這是toast message的css-->
+</head>
+<body>
+    <div id="bg" class="background frame">
+        <div class="bg-top"></div>
+        <div class="bg-bot"></div>
+    </div>
+    <div id="filter" class="filter frame"></div>
+    <div class="frame curtain">
+        <div id="index" class="masthead index viewport-height stripe">
+            <div class="visible on lg long stripe"></div>
+            <div class="visible on md short stripe"></div>
+            <div class="ui middle aligned page stackable grid">
+                <div class="six wide column">
+                    <img class="ui centerized image" src="img/icon.png" alt="">
+                </div>
+                <div class="ten wide column">
+                    <!-- <img class="ui image" src="title.png"> -->
+                    <h1 class="ui center aligned massive header">興大湖畔音樂季</h1>
+                    <div class="ui center aligned header">2016 3/5 ~ 13 的夜晚星空，讓我們在圖書館前廣場，享受湖畔，享受音樂</div>
+                    <div id="menu-enabler" class="short stripe"></div>
+                    <div id="menuable" class="ui four column centered grid">
+                        <div id="to-top" class="column">
+                            <img href="#index" class="ui index centerized goto image" src="img/icon.png" alt="" data-html="回到最上方">
+                        </div>
+                        <div class="column">
+                            <h2 href="#recruit" class="ui recruit icon centerized goto header" data-html="我們都有的歡笑淚水">
 									<i class="photo icon"></i>
 									<div class="content">
 										大學回憶
 									<div class="sub header visible having sm">年輕人的歌，唱給年輕人聽。</div>
 									</div>
 								</h2>
-							</div>
-							<div class="column">
-								<h2 href="#concert" class="ui concert icon centerized goto header" data-html="盡情搖擺吧">
+                        </div>
+                        <div class="column">
+                            <h2 href="#concert" class="ui concert icon centerized goto header" data-html="盡情搖擺吧">
 									<i class="music icon"></i>
 									<div class="content">
 										音樂季
 									<div class="sub header visible having sm">演出時間表</div>
 									</div>
 								</h2>
-							</div>
-							<div class="column">
-								<h2 href="#vender" class="ui vender icon centerized goto header" data-html="手作vs美食，難以抗拒">
+                        </div>
+                        <div class="column">
+                            <h2 href="#vender" class="ui vender icon centerized goto header" data-html="手作vs美食，難以抗拒">
 									<i class="tree icon"></i>
 									<div class="content">
 										湖畔小攤
 									<div class="sub header visible having sm">來看看有啥小東西</div>
 									</div>
 								</h2>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div id="des" class="masthead des viewport-height stripe">
-				<div class="ui page grid">
-					<div class="twelve wide column">
-						<h3 class="ui center header">十八歲，你還怎麼青澀；貳拾貳，你又怎麼成熟</h3>
-						<h3 class="ui center header">在無數次邁向下一個階段，我們留下的腳印或回憶，仍光輝閃爍</h3>
-						<h3 class="ui center header">只是隨著太陽月亮，它們總會黯淡…</h3>
-						<h3 class="ui center header"></h3>
-						<h3 class="ui center header">或者我們收集起來，並寫下每一秒鐘的故事</h3>
-						<h3 class="ui center header">告訴所有人：我們曾經勇敢，曾經美麗；我們走過悲傷，也擁抱過笑容</h3>
-						<h3 class="ui center header">讓青春回憶如繁星，永恆</h3>
-					</div>
-					<div class="four wide column"></div>
-				</div>
-				
-			<!--使用者徵文提交區-->
-			<div class="ui container">
-				<div class="ui grid stackable">
-				    <div class="row">
-				    		<div class="ui two wide column"></div>
-
-				        <div class="ui twelve wide column">
-				            <div class="ui huge message page grid center aligned">
-				                <h1 class="ui huge header">【主題：校園小角落】</h1>
-				                <p>
-				               無論是在湖畔突然捕捉到的那一幕美好
-											   或是關於小角落的傳奇故事
-											   又可能是和同學們在體育館的熱血回憶
-											   從學餐到綜大，圖書館到中興湖
-											   每個地方都是我們共同的秘密基地
-											   現在就拿起相機和筆記錄一切吧
-											   希望你們能和我們分享校園美麗的一隅
-												</p>				                
-				            </div>
-			            	<div class="ui form">
-			            		<div class="two fields">
-			            			<div class="field" >
-			            				<label>Name</label>
-			            				<input placeholder="請填入姓名" type="text" id="name">
-			            			</div>
-			            			<div class="field">
-			            				<label>Phone</label>
-			            				<input placeholder="Please input your phone number" type="text" id="phone">
-			            			</div>
-			            		</div>
-			            		<div class="field">
-			            			<label>學制</label>
-			            			<div class="ui selection dropdown" id='v_degree'>
-			            				<div class="default text">請選擇學制</div>
-			            				<i class="dropdown icon"></i>
-			            				<input name="gender" type="hidden">
-			            				<div class="menu">
-			            					<div class="item" data-value="請選擇學制">請選擇學制</div>
-			            					<div class="item" data-value="學士班">學士班</div>
-			            					<div class="item" data-value="碩士班">碩士班</div>
-			            					<div class="item" data-value="博士班">博士班</div>
-			            					<div class="item" data-value="產專班">產專班</div>
-			            					<div class="item" data-value="碩專班">碩專班</div>
-			            					<div class="item" data-value="進修學士班">進修學士班</div>
-			            				</div>
-			            			</div>
-			            			<div class="field">
-			            				<label>系所</label>
-			            				<div class="ui selection dropdown" id='v_major'>
-			            					<div class="default text">請選擇系所</div>
-			            					<i class="dropdown icon"></i>
-			            					<input name="gender" type="hidden">
-			            					<div class="menu">
-
-			            					</div>
-			            				</div>
-			            			</div>
-			            			<div class="field">
-			            				<label>年級</label>
-			            				<div class="ui selection dropdown" id='v_level'>
-			            					<div class="default text">請選擇年級</div>
-			            					<i class="dropdown icon"></i>
-			            					<input name="gender" type="hidden">
-			            					<div class="menu">
-			            						<div class="item" data-value="請選擇年級">請選擇年級</div>
-			            					</div>	       	
-			            				</div>
-			            			</div>
-			            			<div class="ui positive message">
-			            				<i class="close icon"></i>
-			            				<div class="header">
-			            					麻煩確認並同意以下事項
-			            				</div>
-			            				<p>所有參與徵稿之作品及原稿數位檔案之著作財產權歸原著所有，唯參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉於活動中無償使用作品。本會擁有素材或影片創意重製、公開展示之權利，均不另予通知及致酬。經公布獲展之作品，著作人不得要求取消獲展資格。參展作品不得冒名、抄襲、複製他人之作品，亦不得以夫妻、子女、朋友或任何關係，將參展作品之著作權讓與、買賣以行冒名頂替參展之實，違者經查證屬實將依法除名，不予展覽。凡參賽即視同認可並接受本簡章之各項規定。</p>
-			            				<p>參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉為保護您的個人資料，依據個人資料保護法規定，於提供良好服務及執行職務或業務之必要範圍內蒐集、處理及利用您的個人資料。您同意本會以您所提供的個人資料確認您的身份、與您進行連絡、於展覽現場標誌，以及其他隱私權保護政策規範之使用方式。非在您同意下，本會不會將您的資料提供於本會外使用，您對於本會保有您的個人資料部分，日後仍得享有下列權利：一、得向本會查詢、請求閱覽、請求製給複製本。而本會依法得酌收必要成本費用。二、得向本會請求補充或更正。惟依法您應為適當之釋明。三、得向本會請求停止蒐集、處理或利用及請求刪除您的個人資料。</p>
-			            			</div>
-			            			<div class="inline field">
-			            				<div class="ui checkbox">
-			            					<input class="hidden" tabindex="0" type="checkbox" id="checked">
-			            					<label>I agree to the Terms and Conditions</label>
-			            				</div>
-			            			</div>
-			            			<div class="field">
-			            				<label>圖片連結</label>
-			            				<input placeholder="Please place your link into this blank" type="text" id="photo">
-			            			</div>
-			            			<div class="field">
-			            				<label>徵文</label>
-			            				<textarea id="text-submit"></textarea>
-			            			</div>
-			            			<button class="ui red button" id="submit">Submit</button>			  
-			            		</div>
-			            	</div>			
-			            </div>
-
-				        </div>
-				    		<div class="ui two wide column"></div>
-				    </div>
-				</div>
-
-
-		
-                <div id="picture_txt" class="ui page one column grid"><div class="column">
-                        <h3 class="ui right aligned header">搞笑、有趣、荒謬、溫馨、感人</h3>
-                        <h3 class="ui right aligned header">每一個捧腹大笑會心一笑哈哈大笑</h3>
-                        <h3 class="ui right aligned header">就在這裡！貼圖作家的小天地～</h3>
-                </div></div>
-                <div id="picture" class="ui page stackable three column grid"></div>
-
-			</div>
-			<div id="recruit" class="masthead recruit viewport-height stripe">
-				<div class="short stripe"></div>
-				<h2 class="ui icon centerized header">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="des" class="masthead des viewport-height stripe">
+            <div class="ui page grid">
+                <div class="twelve wide column">
+                    <h3 class="ui center header">十八歲，你還怎麼青澀；貳拾貳，你又怎麼成熟</h3>
+                    <h3 class="ui center header">在無數次邁向下一個階段，我們留下的腳印或回憶，仍光輝閃爍</h3>
+                    <h3 class="ui center header">只是隨著太陽月亮，它們總會黯淡…</h3>
+                    <h3 class="ui center header"></h3>
+                    <h3 class="ui center header">或者我們收集起來，並寫下每一秒鐘的故事</h3>
+                    <h3 class="ui center header">告訴所有人：我們曾經勇敢，曾經美麗；我們走過悲傷，也擁抱過笑容</h3>
+                    <h3 class="ui center header">讓青春回憶如繁星，永恆</h3>
+                </div>
+                <div class="four wide column"></div>
+            </div>
+            <!--使用者徵文提交區-->
+            <div class="ui container">
+                <div class="ui grid stackable">
+                    <div class="row">
+                        <div class="ui two wide column"></div>
+                        <div class="ui twelve wide column">
+                            <div class="ui huge message page grid center aligned">
+                                <h1 class="ui huge header">【主題：校園小角落】</h1>
+                                <p>
+                                    無論是在湖畔突然捕捉到的那一幕美好 或是關於小角落的傳奇故事 又可能是和同學們在體育館的熱血回憶 從學餐到綜大，圖書館到中興湖 每個地方都是我們共同的秘密基地 現在就拿起相機和筆記錄一切吧 希望你們能和我們分享校園美麗的一隅
+                                </p>
+                            </div>
+                            <div class="typeform-widget" data-url="https://nchusg.typeform.com/to/kn3c8Z" data-text="Membership Application" style="width:100%;height:500px;"></div>
+                            <!-- <div class="ui form">
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label>Name</label>
+                                        <input placeholder="請填入姓名" type="text" id="name">
+                                    </div>
+                                    <div class="field">
+                                        <label>Phone</label>
+                                        <input placeholder="Please input your phone number" type="text" id="phone">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label>學制</label>
+                                    <div class="ui selection dropdown" id='v_degree'>
+                                        <div class="default text">請選擇學制</div>
+                                        <i class="dropdown icon"></i>
+                                        <input name="gender" type="hidden">
+                                        <div class="menu">
+                                            <div class="item" data-value="請選擇學制">請選擇學制</div>
+                                            <div class="item" data-value="學士班">學士班</div>
+                                            <div class="item" data-value="碩士班">碩士班</div>
+                                            <div class="item" data-value="博士班">博士班</div>
+                                            <div class="item" data-value="產專班">產專班</div>
+                                            <div class="item" data-value="碩專班">碩專班</div>
+                                            <div class="item" data-value="進修學士班">進修學士班</div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label>系所</label>
+                                        <div class="ui selection dropdown" id='v_major'>
+                                            <div class="default text">請選擇系所</div>
+                                            <i class="dropdown icon"></i>
+                                            <input name="gender" type="hidden">
+                                            <div class="menu">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label>年級</label>
+                                        <div class="ui selection dropdown" id='v_level'>
+                                            <div class="default text">請選擇年級</div>
+                                            <i class="dropdown icon"></i>
+                                            <input name="gender" type="hidden">
+                                            <div class="menu">
+                                                <div class="item" data-value="請選擇年級">請選擇年級</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ui positive message">
+                                        <i class="close icon"></i>
+                                        <div class="header">
+                                            麻煩確認並同意以下事項
+                                        </div>
+                                        <p>所有參與徵稿之作品及原稿數位檔案之著作財產權歸原著所有，唯參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉於活動中無償使用作品。本會擁有素材或影片創意重製、公開展示之權利，均不另予通知及致酬。經公布獲展之作品，著作人不得要求取消獲展資格。參展作品不得冒名、抄襲、複製他人之作品，亦不得以夫妻、子女、朋友或任何關係，將參展作品之著作權讓與、買賣以行冒名頂替參展之實，違者經查證屬實將依法除名，不予展覽。凡參賽即視同認可並接受本簡章之各項規定。</p>
+                                        <p>參與徵稿即表示您同意國立中興大學學生會〈以下簡稱本會〉為保護您的個人資料，依據個人資料保護法規定，於提供良好服務及執行職務或業務之必要範圍內蒐集、處理及利用您的個人資料。您同意本會以您所提供的個人資料確認您的身份、與您進行連絡、於展覽現場標誌，以及其他隱私權保護政策規範之使用方式。非在您同意下，本會不會將您的資料提供於本會外使用，您對於本會保有您的個人資料部分，日後仍得享有下列權利：一、得向本會查詢、請求閱覽、請求製給複製本。而本會依法得酌收必要成本費用。二、得向本會請求補充或更正。惟依法您應為適當之釋明。三、得向本會請求停止蒐集、處理或利用及請求刪除您的個人資料。</p>
+                                    </div>
+                                    <div class="inline field">
+                                        <div class="ui checkbox">
+                                            <input class="hidden" tabindex="0" type="checkbox" id="checked">
+                                            <label>I agree to the Terms and Conditions</label>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label>圖片連結(300dpi)</label>
+                                        <input placeholder="Please place your link into this blank" type="text" id="photo">
+                                    </div>
+                                    <div class="field">
+                                        <label>徵文(30~300字)</label>
+                                        <textarea id="text-submit"></textarea>
+                                    </div>
+                                    <button class="ui red button" id="submit">Submit</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui two wide column"></div>
+                </div>
+            </div>
+            <div id="picture_txt" class="ui page one column grid">
+                <div class="column">
+                    <h3 class="ui right aligned header">搞笑、有趣、荒謬、溫馨、感人</h3>
+                    <h3 class="ui right aligned header">每一個捧腹大笑會心一笑哈哈大笑</h3>
+                    <h3 class="ui right aligned header">就在這裡！貼圖作家的小天地～</h3>
+                </div>
+            </div>
+            <div id="picture" class="ui page stackable three column grid"></div>
+        </div>
+        <div id="recruit" class="masthead recruit viewport-height stripe">
+            <div class="short stripe"></div>
+            <h2 class="ui icon centerized header">
 					<i class="photo icon"></i>
 					<div class="content">
 						你我的大學回憶展覽
 					<div class="sub header">年輕人的歌，唱給年輕人聽。</div>
 					</div>
 				</h2>
-				<div id="memories" class="ui page two column middle aligned relaxed fitted doubling grid">
-				</div>
-			</div>
-			<div id="concert" class="masthead concert viewport-height stripe">
-				<div class="short stripe"></div>
-				<h2 class="ui icon centerized header">
+            <div id="memories" class="ui page two column middle aligned relaxed fitted doubling grid">
+            </div>
+        </div>
+        <div id="concert" class="masthead concert viewport-height stripe">
+            <div class="short stripe"></div>
+            <h2 class="ui icon centerized header">
 					<i class="music icon"></i>
 					<div class="content">
 						音樂季
 					<div class="sub header">演出時間表</div>
 					</div>
 				</h2>
-				<div class="ui page one column grid">
-					<div class="column">
-						<div id="time-table" class="centerized">
-							<table class="ui inverted unstackable celled purple table">
-								<thead>
-									<tr>
-										<th class="center aligned">3/5 (六)</th>
-										<th class="center aligned">3/6 (日)</th>
-										<th class="center aligned">3/7 (一)</th>
-										<th class="center aligned">3/8 (二)</th>
-										<th class="center aligned">3/9 (三)</th>
-										<th class="center aligned">3/10 (四)</th>
-										<th class="center aligned">3/11 (五)</th>
-										<th class="center aligned">3/12 (六)</th>
-										<th class="center aligned">3/13 (日)</th>
-									</tr>
-								</thead>
-								<tbody>
-								<!--this part is a temparary bulletin board-->
-								<tr>
-									<td colspan="9" class="center aligned">coming soon !!</td>
-								</tr>
-								<!--
+            <div class="ui page one column grid">
+                <div class="column">
+                    <div id="time-table" class="centerized">
+                        <table class="ui inverted unstackable celled purple table">
+                            <thead>
+                                <tr>
+                                    <th class="center aligned">3/5 (六)</th>
+                                    <th class="center aligned">3/6 (日)</th>
+                                    <th class="center aligned">3/7 (一)</th>
+                                    <th class="center aligned">3/8 (二)</th>
+                                    <th class="center aligned">3/9 (三)</th>
+                                    <th class="center aligned">3/10 (四)</th>
+                                    <th class="center aligned">3/11 (五)</th>
+                                    <th class="center aligned">3/12 (六)</th>
+                                    <th class="center aligned">3/13 (日)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--this part is a temparary bulletin board-->
+                                <tr>
+                                    <td colspan="9" class="center aligned">coming soon !!</td>
+                                </tr>
+                                <!--
 									<tr>
 										<td class="center aligned"></td>
 										<td class="center aligned">17:30-17:50 <a class="slide_ctl" href="#response">海螺的回應</a></td>
@@ -278,19 +263,21 @@
 										<td class="center aligned">20:30-21:10 <a class="slide_ctl" href="#baba">來吧！焙焙</a></td>
 									</tr>
 									-->
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				<div class="ui page centered stackable column grid">
-					<div id="performer_container" class="nine wide column">
-					</div>
-				</div>
-				<div class="ui page one column grid">
-					<div class="column"><h4>去年有邱振哲與你在湖畔，今年敬請期待</h4></div>
-					<div class="column">
-					<center><h1>coming soon !!</h4></center>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="ui page centered stackable column grid">
+                <div id="performer_container" class="nine wide column">
+                </div>
+            </div>
+            <div class="ui page one column grid">
+                <div class="column">
+                    <h4>去年有邱振哲與你在湖畔，今年敬請期待</h4></div>
+                <div class="column">
+                    <center>
+                        <h1>coming soon !!</h4></center>
 					    <!--
 						<div id="performer_list" class="ui tiny horizontal divided list">
 						</div>
@@ -347,9 +334,11 @@
 				</div>
 			</div>
 		</div>
-
+		<div style="display:none"> <!--廣告的tag-->     
+		  <a id="fancybox-manual-b" href="javascript:;">advertisement</a>
+		</div>          
 		<!-- submit model -->
-		<div id="submit-confirm" class="ui modal">
+		<!-- <div id="submit-confirm" class="ui modal">
 			<i class="close icon"></i>
 			<div class="header">
 				送出之前...
@@ -392,10 +381,10 @@
 					<i class="checkmark icon"></i>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- complete model -->
-		<div id="complete" class="ui basic modal">
+		<!-- <div id="complete" class="ui basic modal">
 			<i class="close icon"></i>
 			<div id="complete-header" class="header">
 				結果...
@@ -411,10 +400,12 @@
 				</div>
 				</div>
 			</div>
-		</div>
-		<div style="display:none">      
-		  <a id="fancybox-manual-b" href="javascript:;">advertisement</a>
-		</div>    
+		</div> -->
+		<!-- typeform -->
+
+
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+    <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">Powered by <a href="http://www.typeform.com/?utm_campaign=sbBGJG&amp;utm_source=typeform.com-1701438-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded&amp;utm_term=EN" style="color: #999" target="_blank">Typeform</a></div>
 		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js"></script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.11/jquery.scrollTo.min.js"></script>
